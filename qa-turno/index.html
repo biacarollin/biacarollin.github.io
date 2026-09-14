@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QA do Turno | Bianca Carvalho</title>
+<meta name="description" content="Case de qualidade e testes do Turno: plano de testes, casos, execução manual com evidências, relatórios de bugs e matriz de rastreabilidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  .risk { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0; }
+  .risk .card { padding: 16px 18px; }
+  .risk h4 { display: flex; justify-content: space-between; gap: 10px; align-items: center; font-size: 15px; margin-bottom: 6px; }
+  .risk p { font-size: 14.5px; margin: 0; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13.5px; color: var(--ink-2); }
+  .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 7px; vertical-align: middle; }
+  .legend .g::before { background: var(--green); }
+  .legend .r::before { background: var(--red); }
+  .legend .a::before { background: var(--amber); }
+  @media (max-width: 720px) { .risk { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
+<div class="topline"></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../"><span class="brand-dot"></span>Bianca Carvalho</a>
+    <nav class="nav-links" aria-label="Pastas">
+      <a href="../#pastas" data-i18n="nav.all">Todas as pastas</a>
+      <a href="../turno/">turno</a>
+      <a href="../gestao-de-projetos/">gestao-de-projetos</a>
+      <a href="../formacao/">formacao</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="https://github.com/biacarollin/turno-qa-suite" target="_blank" rel="noopener" data-i18n="nav.cta">Repositório</a>
+      <div class="lang" role="group" aria-label="Idioma">
+        <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT</button>
+        <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+  <header class="case-head">
+    <div class="wrap">
+      <div class="crumbs"><a href="../">inicio</a><span>/</span><b>qa-turno</b></div>
+      <span class="eyebrow" style="color:var(--green)" data-i18n="h.eyebrow">Qualidade e testes</span>
+      <h1 data-i18n="h.h1">QA do Turno</h1>
+      <p class="lead" data-i18n="h.lead">A camada de qualidade do Turno, mantida em um repositório próprio: plano de testes, casos, execução manual com evidências, relatórios de bugs e matriz de rastreabilidade.</p>
+      <div class="tags" data-i18n="h.tags">
+        <span class="tag green">25 casos executados</span>
+        <span class="tag">Jira</span>
+        <span class="tag">Testes funcionais, regressivos e exploratórios</span>
+      </div>
+      <div class="case-links">
+        <a class="btn btn-primary" href="https://github.com/biacarollin/turno-qa-suite" target="_blank" rel="noopener" data-i18n="h.link1">turno-qa-suite no GitHub</a>
+        <a class="btn btn-ghost" href="../turno/" data-i18n="h.link2">Ver a pasta do produto</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap case-body">
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">01</div><h2 data-i18n="s1.h2">Estratégia</h2></div>
+      <div class="case-content" data-i18n="s1">
+        <p class="lede">Com um produto em evolução rápida e desenvolvimento assistido por IA, o papel do QA é proteger o que não pode quebrar e registrar tudo de um jeito que outra pessoa consiga repetir.</p>
+        <p>Em vez de perseguir cobertura total, priorizei os fluxos de maior risco para quem depende do Turno para trabalhar. Se um deles falhar, o produto perde a confiança da equipe.</p>
+        <div class="risk">
+          <div class="card">
+            <h4>Passagem de turno <span class="tag red">Crítico</span></h4>
+            <p>Registro, resumo por IA, assinatura digital e leitura pelo próximo turno.</p>
+          </div>
+          <div class="card">
+            <h4>Autenticação e acesso <span class="tag red">Crítico</span></h4>
+            <p>Login, sessão, identidade do usuário e permissões entre gestão e colaborador.</p>
+          </div>
+          <div class="card">
+            <h4>Gestão de equipe <span class="tag amber">Alto</span></h4>
+            <p>Convite, listagem de membros, papéis e ausências.</p>
+          </div>
+          <div class="card">
+            <h4>Checkout e planos <span class="tag amber">Alto</span></h4>
+            <p>Assinatura, limites por plano e portal do cliente. Uma falha aqui bloqueia receita.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">02</div><h2 data-i18n="s2.h2">Como o repositório é organizado</h2></div>
+      <div class="case-content" data-i18n="s2">
+        <p>A suíte fica separada do código de produção, no repositório turno-qa-suite. A ideia é que qualquer pessoa consiga ler o plano, seguir os casos e conferir as evidências sem precisar rodar o produto.</p>
+<div class="tree"><span class="d">turno-qa-suite/</span>
+├── <span class="d">docs/</span>                  <span class="c">plano de testes: escopo, tipos, critérios de entrada e saída</span>
+├── <span class="d">casos-de-teste/</span>        <span class="c">casos funcionais por funcionalidade</span>
+│   ├── login
+│   ├── fechamento-de-turno
+│   └── gestao-de-membros
+├── <span class="d">execucao-de-testes/</span>    <span class="c">checklist da execução manual, caso a caso</span>
+├── <span class="d">evidencias/</span>            <span class="c">capturas de tela dos testes e dos bugs</span>
+└── <span class="d">relatorios-de-bugs/</span>    <span class="c">versão pública dos bugs registrados no Jira</span></div>
+        <h3>O fluxo de trabalho</h3>
+        <ol class="steps">
+          <li><b>Plano de testes</b>Definição de escopo, tipos de teste, ambientes, dados e critérios de entrada e saída.</li>
+          <li><b>Casos de teste</b>Escritos a partir das regras de negócio, e não das telas, para resistirem a mudanças de interface.</li>
+          <li><b>Execução manual com evidências</b>Cada caso registrado como aprovado, reprovado ou bloqueado, com captura de tela.</li>
+          <li><b>Registro de defeitos</b>Bugs abertos no Jira com passos, resultado esperado, resultado obtido e severidade. Uma versão pública fica no repositório.</li>
+          <li><b>Rastreabilidade</b>Matriz ligando requisito, caso de teste, resultado e bug.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">03</div><h2 data-i18n="s3.h2">Plano de testes</h2></div>
+      <div class="case-content" data-i18n="s3">
+        <dl class="kv">
+          <dt>Em escopo</dt><dd>Fluxos críticos end-to-end, testes funcionais de interface, validação das regras de negócio e regressão dos caminhos principais.</dd>
+          <dt>Fora de escopo</dt><dd>Testes de carga e performance, testes de segurança aprofundados e cobertura unitária do código gerado.</dd>
+          <dt>Ambiente</dt><dd>Ambiente de teste isolado, com base de dados própria no Supabase.</dd>
+          <dt>Dados</dt><dd>Usuários e turnos semeados para o teste. Nenhum dado real de funcionário.</dd>
+          <dt>Critério de saída</dt><dd>Todos os casos de prioridade crítica aprovados e nenhum bug bloqueante em aberto.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">04</div><h2 data-i18n="s4.h2">Execução</h2></div>
+      <div class="case-content" data-i18n="s4">
+        <p>Primeira rodada completa de execução manual, com 25 casos.</p>
+        <div class="stat-row">
+          <div class="stat green"><div class="v">12</div><div class="l">aprovados, resultado conforme o esperado</div></div>
+          <div class="stat red"><div class="v">3</div><div class="l">reprovados, com bug confirmado e registrado no Jira</div></div>
+          <div class="stat amber"><div class="v">10</div><div class="l">bloqueados por uma única causa raiz, o bug TQ-3</div></div>
+        </div>
+        <div class="bar" role="img" aria-label="12 aprovados, 3 reprovados, 10 bloqueados">
+          <span class="g" style="width:48%"></span><span class="r" style="width:12%"></span><span class="a" style="width:40%"></span>
+        </div>
+        <div class="legend"><span class="g">Aprovados</span><span class="r">Reprovados</span><span class="a">Bloqueados</span></div>
+
+        <h3>Amostra dos casos</h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>ID</th><th>Cenário</th><th>Resultado esperado</th><th>Prioridade</th></tr></thead>
+            <tbody>
+              <tr><td class="id">CT-LOGIN-01</td><td>Login com credenciais válidas</td><td>Sessão criada e painel carregado com os dados do usuário correto</td><td><span class="tag red">Crítica</span></td></tr>
+              <tr><td class="id">CT-LOGIN-02</td><td>Login com senha incorreta</td><td>Acesso negado com mensagem clara, sem criar sessão</td><td><span class="tag red">Crítica</span></td></tr>
+              <tr><td class="id">CT-TURNO-01</td><td>Fechar turno com resumo por IA</td><td>Passagem salva, resumo gerado e visível no histórico</td><td><span class="tag red">Crítica</span></td></tr>
+              <tr><td class="id">CT-TURNO-03</td><td>Assinar digitalmente a passagem</td><td>Hash gerado e vinculado ao usuário autenticado</td><td><span class="tag red">Crítica</span></td></tr>
+              <tr><td class="id">CT-MEMB-01</td><td>Listar membros da organização</td><td>Apenas membros da organização atual aparecem</td><td><span class="tag amber">Alta</span></td></tr>
+              <tr><td class="id">CT-MEMB-02</td><td>Convidar membro por link</td><td>Convite gerado e membro adicionado com o papel correto</td><td><span class="tag amber">Alta</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">05</div><h2 data-i18n="s5.h2">O bug que travou a rodada</h2></div>
+      <div class="case-content" data-i18n="s5">
+        <div class="callout red">
+          <p><strong>TQ-3, severidade alta.</strong> O sistema não resolvia corretamente a identidade do usuário autenticado. Um único defeito derrubou, ao mesmo tempo, login, painel, assinatura digital e listagem de membros.</p>
+        </div>
+        <h3>Como foi isolado</h3>
+        <ul>
+          <li>Reprodução com mais de uma conta, para confirmar que o dado exibido pertencia a outro usuário e não era um problema de cache.</li>
+          <li>Verificação direta nas tabelas do Supabase, comparando o usuário da sessão com o registro retornado.</li>
+          <li>Registro no Jira com passos, evidências, impacto e a lista dos 10 casos bloqueados por ele.</li>
+        </ul>
+        <p>O valor desse achado não está no volume de casos reprovados, e sim em ter ligado dez falhas aparentemente separadas a uma causa só, o que muda completamente a ordem de correção.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">06</div><h2 data-i18n="s6.h2">Como um bug é registrado</h2></div>
+      <div class="case-content" data-i18n="s6">
+        <p>Cada defeito nasce no Jira e ganha uma cópia pública no repositório, para que quem lê o case consiga acompanhar sem acesso ao quadro. O modelo é sempre o mesmo.</p>
+        <dl class="kv">
+          <dt>Título</dt><dd>Uma frase que diz o que está errado e onde. Exemplo: identidade do usuário autenticado resolvida de forma incorreta no painel.</dd>
+          <dt>Passos</dt><dd>Sequência numerada, com os dados usados, para que qualquer pessoa reproduza.</dd>
+          <dt>Esperado</dt><dd>O comportamento previsto pela regra de negócio e pelo critério de aceite.</dd>
+          <dt>Obtido</dt><dd>O que aconteceu de fato, com captura de tela na pasta de evidências.</dd>
+          <dt>Severidade</dt><dd>Alta, média ou baixa, definida pelo impacto em quem usa o produto, e não pelo esforço de correção.</dd>
+          <dt>Impacto</dt><dd>Lista dos casos de teste bloqueados ou afetados, que alimenta a matriz de rastreabilidade.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">07</div><h2 data-i18n="s7.h2">Próximos passos e aprendizados</h2></div>
+      <div class="case-content" data-i18n="s7">
+        <h3>Próximos passos</h3>
+        <ul>
+          <li>Reexecutar os 10 casos bloqueados depois da correção do TQ-3</li>
+          <li>Ampliar a cobertura dos caminhos de erro e gerar relatórios de execução</li>
+          <li>Avaliar automação dos fluxos críticos quando as telas estabilizarem</li>
+        </ul>
+        <h3>O que essa fase ensinou</h3>
+        <ul>
+          <li>Em um produto com desenvolvimento assistido por IA, o QA é a rede de segurança que valida o que foi gerado contra as regras de negócio reais.</li>
+          <li>Priorizar por risco rende mais do que perseguir porcentagem de cobertura.</li>
+          <li>Escrever o caso a partir da regra de negócio, e não da tela, deixa o teste resistente a mudanças de interface.</li>
+          <li>Um teste que falha sem motivo deixa de ser levado a sério. Estabilidade da suíte faz parte do trabalho.</li>
+        </ul>
+      </div>
+    </section>
+
+    <a class="next-folder" href="../gestao-de-projetos/">
+      <div data-i18n="next">
+        <span class="folder-path">próxima pasta: /gestao-de-projetos</span>
+        <h3>Gestão de projetos</h3>
+        <p>Backlog e roadmap do Turno, certificação do Google e gestão aplicada em operações.</p>
+      </div>
+      <span class="btn btn-ghost" data-i18n="open">Abrir</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span><span data-i18n="ft.made">Feito por</span> <a href="https://github.com/biacarollin" target="_blank" rel="noopener">Biacarollin</a> <span class="heart">♥</span></span>
+    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../turno/">turno</a> / <a href="../gestao-de-projetos/">gestao-de-projetos</a> / <a href="../formacao/">formacao</a></span>
+  </div>
+</footer>
+
+<script>
+  var TITLES = { pt: 'QA do Turno | Bianca Carvalho', en: 'Turno QA | Bianca Carvalho' };
+  var EN = {
+    'skip': 'Skip to content',
+    'nav.all': 'All folders',
+    'nav.cta': 'Repository',
+    'h.eyebrow': 'Quality and testing',
+    'h.h1': 'Turno QA',
+    'h.lead': 'The quality layer of Turno, kept in its own repository: test plan, test cases, manual execution with evidence, bug reports and a traceability matrix.',
+    'h.tags': '<span class="tag green">25 test cases executed</span><span class="tag">Jira</span><span class="tag">Functional, regression and exploratory testing</span>',
+    'h.link1': 'turno-qa-suite on GitHub',
+    'h.link2': 'See the product folder',
+    's1.h2': 'Strategy',
+    's1': '<p class="lede">With a fast-changing product and AI-assisted development, the role of QA is to protect what cannot break and to record everything in a way that someone else can repeat.</p><p>Instead of chasing full coverage, I prioritized the flows with the highest risk for the people who depend on Turno to work. If one of them fails, the product loses the trust of the team.</p><div class="risk"><div class="card"><h4>Shift handover <span class="tag red">Critical</span></h4><p>Recording, AI summary, digital signature and reading by the next shift.</p></div><div class="card"><h4>Authentication and access <span class="tag red">Critical</span></h4><p>Login, session, user identity and permissions between management and collaborator.</p></div><div class="card"><h4>Team management <span class="tag amber">High</span></h4><p>Invitations, member list, roles and absences.</p></div><div class="card"><h4>Checkout and plans <span class="tag amber">High</span></h4><p>Subscription, plan limits and customer portal. A failure here blocks revenue.</p></div></div>',
+    's2.h2': 'How the repository is organized',
+    's2': '<p>The suite is kept separate from the production code, in the turno-qa-suite repository. The idea is that anyone can read the plan, follow the test cases and check the evidence without running the product.</p><div class="tree"><span class="d">turno-qa-suite/</span>\n├── <span class="d">docs/</span>                  <span class="c">test plan: scope, test types, entry and exit criteria</span>\n├── <span class="d">casos-de-teste/</span>        <span class="c">functional test cases by feature</span>\n│   ├── login\n│   ├── fechamento-de-turno\n│   └── gestao-de-membros\n├── <span class="d">execucao-de-testes/</span>    <span class="c">manual execution checklist, case by case</span>\n├── <span class="d">evidencias/</span>            <span class="c">screenshots of tests and bugs</span>\n└── <span class="d">relatorios-de-bugs/</span>    <span class="c">public version of the bugs logged in Jira</span></div><h3>The workflow</h3><ol class="steps"><li><b>Test plan</b>Definition of scope, test types, environments, data, and entry and exit criteria.</li><li><b>Test cases</b>Written from the business rules, not from the screens, so they survive interface changes.</li><li><b>Manual execution with evidence</b>Each case recorded as passed, failed or blocked, with a screenshot.</li><li><b>Defect logging</b>Bugs opened in Jira with steps, expected result, actual result and severity. A public version lives in the repository.</li><li><b>Traceability</b>A matrix linking requirement, test case, result and bug.</li></ol>',
+    's3.h2': 'Test plan',
+    's3': '<dl class="kv"><dt>In scope</dt><dd>Critical end-to-end flows, functional interface tests, validation of business rules and regression of the main paths.</dd><dt>Out of scope</dt><dd>Load and performance testing, in-depth security testing and unit coverage of the generated code.</dd><dt>Environment</dt><dd>Isolated test environment, with its own database in Supabase.</dd><dt>Data</dt><dd>Users and shifts seeded for testing. No real employee data.</dd><dt>Exit criteria</dt><dd>All critical-priority cases passed and no blocking bug open.</dd></dl>',
+    's4.h2': 'Execution',
+    's4': '<p>First complete round of manual execution, with 25 test cases.</p><div class="stat-row"><div class="stat green"><div class="v">12</div><div class="l">passed, result as expected</div></div><div class="stat red"><div class="v">3</div><div class="l">failed, with a confirmed bug logged in Jira</div></div><div class="stat amber"><div class="v">10</div><div class="l">blocked by a single root cause, bug TQ-3</div></div></div><div class="bar" role="img" aria-label="12 passed, 3 failed, 10 blocked"><span class="g" style="width:48%"></span><span class="r" style="width:12%"></span><span class="a" style="width:40%"></span></div><div class="legend"><span class="g">Passed</span><span class="r">Failed</span><span class="a">Blocked</span></div><h3>Sample test cases</h3><div class="table-scroll"><table><thead><tr><th>ID</th><th>Scenario</th><th>Expected result</th><th>Priority</th></tr></thead><tbody><tr><td class="id">CT-LOGIN-01</td><td>Login with valid credentials</td><td>Session created and dashboard loaded with the correct user data</td><td><span class="tag red">Critical</span></td></tr><tr><td class="id">CT-LOGIN-02</td><td>Login with wrong password</td><td>Access denied with a clear message, no session created</td><td><span class="tag red">Critical</span></td></tr><tr><td class="id">CT-TURNO-01</td><td>Close shift with AI summary</td><td>Handover saved, summary generated and visible in the history</td><td><span class="tag red">Critical</span></td></tr><tr><td class="id">CT-TURNO-03</td><td>Digitally sign the handover</td><td>Hash generated and linked to the authenticated user</td><td><span class="tag red">Critical</span></td></tr><tr><td class="id">CT-MEMB-01</td><td>List organization members</td><td>Only members of the current organization appear</td><td><span class="tag amber">High</span></td></tr><tr><td class="id">CT-MEMB-02</td><td>Invite member by link</td><td>Invitation generated and member added with the correct role</td><td><span class="tag amber">High</span></td></tr></tbody></table></div>',
+    's5.h2': 'The bug that stopped the round',
+    's5': '<div class="callout red"><p><strong>TQ-3, high severity.</strong> The system did not correctly resolve the identity of the authenticated user. A single defect broke login, dashboard, digital signature and member list at the same time.</p></div><h3>How it was isolated</h3><ul><li>Reproduced with more than one account, to confirm that the data shown belonged to another user and was not a caching problem.</li><li>Checked directly in the Supabase tables, comparing the session user with the returned record.</li><li>Logged in Jira with steps, evidence, impact and the list of the 10 cases it blocked.</li></ul><p>The value of this finding is not in the number of failed cases, but in having linked ten seemingly separate failures to a single cause, which completely changes the order of fixes.</p>',
+    's6.h2': 'How a bug is logged',
+    's6': '<p>Each defect starts in Jira and gets a public copy in the repository, so that whoever reads the case can follow along without access to the board. The template is always the same.</p><dl class="kv"><dt>Title</dt><dd>One sentence saying what is wrong and where. Example: authenticated user identity resolved incorrectly on the dashboard.</dd><dt>Steps</dt><dd>A numbered sequence, with the data used, so anyone can reproduce it.</dd><dt>Expected</dt><dd>The behavior defined by the business rule and the acceptance criteria.</dd><dt>Actual</dt><dd>What really happened, with a screenshot in the evidence folder.</dd><dt>Severity</dt><dd>High, medium or low, defined by the impact on the people who use the product, not by the effort to fix it.</dd><dt>Impact</dt><dd>The list of blocked or affected test cases, which feeds the traceability matrix.</dd></dl>',
+    's7.h2': 'Next steps and lessons',
+    's7': '<h3>Next steps</h3><ul><li>Re-run the 10 blocked cases after TQ-3 is fixed</li><li>Extend coverage of error paths and produce execution reports</li><li>Evaluate automation of the critical flows once the screens are stable</li></ul><h3>What this phase taught me</h3><ul><li>In a product with AI-assisted development, QA is the safety net that checks what was generated against the real business rules.</li><li>Prioritizing by risk pays off more than chasing a coverage percentage.</li><li>Writing the test case from the business rule, not from the screen, keeps the test resistant to interface changes.</li><li>A test that fails for no reason stops being taken seriously. Suite stability is part of the job.</li></ul>',
+    'next': '<span class="folder-path">next folder: /gestao-de-projetos</span><h3>Project management</h3><p>Turno backlog and roadmap, the Google certificate and management applied in operations.</p>',
+    'open': 'Open',
+    'ft.made': 'Made by',
+    'ft.home': 'home'
+  };
+</script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bianca Carvalho | QA e Gestão de Projetos</title>
+<meta name="description" content="Portfólio de Bianca Carvalho. Qualidade de software e gestão de projetos com base em quatro anos de operações de saúde.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .hero { padding: 72px 0 64px; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 56px; align-items: center; }
+  .hero h1 { font-size: clamp(40px, 6vw, 64px); letter-spacing: -0.03em; line-height: 1.05; }
+  .hero .sub { margin-top: 18px; font-size: clamp(18px, 2.2vw, 22px); font-weight: 600; color: var(--ink); max-width: 30ch; line-height: 1.35; }
+  .hero .desc { margin-top: 18px; font-size: 17px; color: var(--ink-2); max-width: 56ch; }
+  .hero-ctas { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 14px; color: var(--ink-3); }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+  .hero-meta svg { width: 15px; height: 15px; }
+
+  .portrait { justify-self: end; width: 100%; max-width: 340px; }
+  .portrait img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+  .transition { padding: 28px 0 8px; }
+  .transition-in { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; font-size: 13.5px; font-weight: 700; }
+  .transition-in .from { color: var(--warm-ink); }
+  .transition-in .to { color: var(--blue-ink); text-align: right; }
+  .transition-in .line { height: 6px; border-radius: 999px; background: var(--grad); }
+
+  .timeline { position: relative; display: grid; gap: 0; }
+  .tl { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 26px 0; border-top: 1px solid var(--line); }
+  .tl:last-child { border-bottom: 1px solid var(--line); }
+  .tl .when { font-family: var(--mono); font-size: 13px; color: var(--ink-3); padding-top: 4px; }
+  .tl h3 { font-size: 18px; }
+  .tl .where { margin-top: 4px; font-size: 14px; color: var(--ink-3); }
+  .tl p { margin-top: 10px; color: var(--ink-2); font-size: 15.5px; max-width: 62ch; }
+  .tl .tags { margin-top: 12px; }
+  .tl.now { background: linear-gradient(90deg, rgba(45,91,227,0.05), transparent); margin: 0 -16px; padding-left: 16px; padding-right: 16px; border-radius: var(--radius-sm); }
+
+  .skills h3 { font-size: 17px; margin-bottom: 12px; }
+  .skills ul { list-style: none; padding: 0; }
+  .skills li { padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px; color: var(--ink-2); }
+  .skills li:last-child { border-bottom: 1px solid var(--line); }
+  .tools-wrap { margin-top: 36px; display: grid; gap: 14px; padding-top: 26px; border-top: 1px solid var(--line); }
+  .tools-row { display: grid; grid-template-columns: 130px 1fr; align-items: start; gap: 16px; }
+  .tools-label { font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); padding-top: 8px; }
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .edu-more { margin-top: 24px; }
+
+  .contact { padding: 84px 0; background: var(--navy); color: #fff; border-top: none; }
+  .contact h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.025em; }
+  .contact p { margin-top: 14px; color: #c5cfe3; max-width: 52ch; font-size: 18px; }
+  .contact p.small { font-size: 15px; color: #9db4f0; margin-top: 8px; }
+  .contact-links { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .contact-links a { display: inline-flex; align-items: center; gap: 9px; padding: 12px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #fff; font-weight: 700; font-size: 15px; }
+  .contact-links a:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
+  .contact-links a.main { background: #fff; color: var(--navy); border-color: #fff; }
+  .contact-links a.main:hover { background: #e9edf7; }
+  .contact-links svg { width: 16px; height: 16px; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 36px; }
+    .portrait { justify-self: start; max-width: 300px; }
+  }
+  @media (max-width: 720px) {
+    .hero { padding: 48px 0 40px; }
+    .tl { grid-template-columns: 1fr; gap: 6px; }
+    .tools-row { grid-template-columns: 1fr; gap: 8px; }
+    .tools-label { padding-top: 0; }
+    .tl.now { margin: 0; padding-left: 12px; padding-right: 12px; }
+    .transition-in { grid-template-columns: 1fr; gap: 8px; }
+    .transition-in .to { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
+<div class="topline"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#"><span class="brand-dot"></span>Bianca Carvalho</a>
+    <nav class="nav-links" aria-label="Seções">
+      <a href="#trajetoria" data-i18n="nav1">Trajetória</a>
+      <a href="#pastas" data-i18n="nav2">Pastas</a>
+      <a href="#competencias" data-i18n="nav3">Competências</a>
+      <a href="#formacao" data-i18n="nav4">Formação</a>
+      <a href="#contato" data-i18n="nav5">Contato</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Idioma">
+        <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT</button>
+        <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="wrap hero">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Qualidade de software e gestão de projetos</span>
+      <h1>Bianca Carvalho</h1>
+      <p class="sub" data-i18n="hero.sub">Da operação de saúde para a tecnologia, com o mesmo cuidado com processo e registro.</p>
+      <p class="desc" data-i18n="hero.desc">Mais de quatro anos de experiência na liderança de equipes, escalas e registros em operações reguladas de saúde, hoje aplicada a teste de software e gestão de projetos, com certificações da PUC-RS e do Google e graduação em Análise e Desenvolvimento de Sistemas em andamento.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#pastas" data-i18n="hero.cta1">Ver as pastas</a>
+        <a class="btn btn-ghost" href="https://github.com/biacarollin" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+          GitHub
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="hero.meta">Disponível para QA, PMO e gestão de projetos</span></span>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="assets/img/bianca.jpg" alt="Foto de Bianca Carvalho" width="900" height="900">
+    </div>
+  </section>
+
+  <div class="wrap transition" aria-hidden="true">
+    <div class="transition-in">
+      <span class="from" data-i18n="tr.from">Operações de saúde</span>
+      <span class="line"></span>
+      <span class="to" data-i18n="tr.to">Qualidade e gestão de software</span>
+    </div>
+  </div>
+
+  <section class="section" id="trajetoria">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow warm" data-i18n="tj.eyebrow">Trajetória</span>
+        <h2 data-i18n="tj.h2">O caminho até aqui</h2>
+        <p data-i18n="tj.p">Comecei em vendas e atendimento, passei anos em operações de saúde e hoje estudo e pratico qualidade de software e gestão de projetos. Cada etapa deixou uma habilidade que uso agora.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="tl">
+          <div class="when" data-i18n="tl1.when">Antes de 2021</div>
+          <div>
+            <h3 data-i18n="tl1.h3">Vendas, atendimento e produção</h3>
+            <div class="where" data-i18n="tl1.where">Vendas internas e externas e atendimento ao cliente em ambiente de restaurante, além de um pequeno negócio próprio de venda de alimentos por aplicativo</div>
+            <p data-i18n="tl1.p">Na função de vendas, aprendi a trabalhar com meta, ritmo de atendimento e cliente na frente. Já no negócio próprio, estruturei e organizei toda a operação do zero, com autonomia total sobre estoque, produção e entrega.</p>
+            <div class="tags" data-i18n="tl1.tags"><span class="tag">Atendimento</span><span class="tag">Metas</span><span class="tag">Organização</span></div>
+          </div>
+        </article>
+
+        <article class="tl">
+          <div class="when" data-i18n="tl2.when">2021 a 2023</div>
+          <div>
+            <h3 data-i18n="tl2.h3">Gestão de equipes e operações</h3>
+            <div class="where" data-i18n="tl2.where">Padrão Enfermagem e EnfQualy, assistência à saúde</div>
+            <p data-i18n="tl2.p">Gestão e liderança de equipes de mais de 60 profissionais de enfermagem em múltiplas unidades. Planejamento e dimensionamento de escalas, controle de indicadores de produtividade e redesenho do processo de cobertura, com dimensionamento de mais de 50 profissionais em Excel e monitoramento de cerca de 10.000 procedimentos por mês no SysCare, reduzindo glosas no faturamento.</p>
+            <div class="tags" data-i18n="tl2.tags"><span class="tag warm">Liderança</span><span class="tag warm">Escalas</span><span class="tag warm">Indicadores</span><span class="tag warm">Redução de glosas</span></div>
+          </div>
+        </article>
+
+        <article class="tl">
+          <div class="when" data-i18n="tl3.when">2024 a 2026</div>
+          <div>
+            <h3 data-i18n="tl3.h3">Farmácia hospitalar, dispensação e controle de estoque</h3>
+            <div class="where" data-i18n="tl3.where">INTS, Hospital Municipal de Bertioga</div>
+            <p data-i18n="tl3.p">Dispensação de medicamentos em alto volume, controle de estoque e conferência de notas fiscais em ambiente regulado.</p>
+            <div class="tags" data-i18n="tl3.tags"><span class="tag warm">Ambiente regulado</span><span class="tag warm">Alto volume</span></div>
+          </div>
+        </article>
+
+        <article class="tl now">
+          <div class="when" data-i18n="tl4.when">2026 em diante</div>
+          <div>
+            <h3 data-i18n="tl4.h3">Transição para tecnologia: QA e gestão de projetos</h3>
+            <div class="where" data-i18n="tl4.where">Certificação em Qualidade e Teste de Software (PUC-RS), Certificação em Gerenciamento de Projetos (Google), graduação em ADS (FAM)</div>
+            <p data-i18n="tl4.p">Desde 2026, aplico essa base prática em operações a projetos reais de tecnologia, cobrindo o ciclo completo: descoberta, requisitos, planejamento, testes e documentação.</p>
+            <div class="tags" data-i18n="tl4.tags"><span class="tag blue">Testes manuais</span><span class="tag blue">Regressão</span><span class="tag blue">Exploratório</span><span class="tag blue">Plano de testes</span><span class="tag blue">Cypress</span><span class="tag blue">Jira</span><span class="tag blue">Scrum e Kanban</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pastas">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="fd.eyebrow">Pastas</span>
+        <h2 data-i18n="fd.h2">O trabalho, organizado em pastas</h2>
+        <p data-i18n="fd.p">Cada pasta reúne uma frente do portfólio. As quatro primeiras são documentação própria, a quinta leva ao código no GitHub.</p>
+      </div>
+
+      <div class="folders">
+        <a class="folder" href="turno/">
+          <span class="folder-path">/turno</span>
+          <h3 data-i18n="f1.h3">Turno, o produto</h3>
+          <p data-i18n="f1.p">SaaS B2B de passagem de turno criado a partir de um problema real da operação de saúde. Escopo, pesquisa, requisitos, telas e decisões de produto.</p>
+          <div class="folder-meta" data-i18n="f1.meta"><span><b>19</b> telas web, <b>7</b> mobile especificadas</span><span class="folder-open">Abrir</span></div>
+        </a>
+
+        <a class="folder green" href="qa-turno/">
+          <span class="folder-path">/qa-turno</span>
+          <h3 data-i18n="f2.h3">QA do Turno</h3>
+          <p data-i18n="f2.p">Plano de testes, casos funcionais, regressivos e exploratórios, execução manual com evidências e relatório de bugs no Jira.</p>
+          <div class="folder-meta" data-i18n="f2.meta"><span><b>25</b> casos executados</span><span class="folder-open">Abrir</span></div>
+        </a>
+
+        <a class="folder warm" href="gestao-de-projetos/">
+          <span class="folder-path">/gestao-de-projetos</span>
+          <h3 data-i18n="f3.h3">Gestão de projetos</h3>
+          <p data-i18n="f3.p">Backlog e roadmap do Turno, certificação do Google e a gestão que já praticava em operações de saúde, com escalas, indicadores e prazos.</p>
+          <div class="folder-meta" data-i18n="f3.meta"><span>Certificação Google</span><span class="folder-open">Abrir</span></div>
+        </a>
+
+        <a class="folder" href="formacao/">
+          <span class="folder-path">/formacao</span>
+          <h3 data-i18n="f4.h3">Formação e certificações</h3>
+          <p data-i18n="f4.p">Graduação em ADS, certificações da PUC-RS e do Google e cursos de qualidade e métodos ágeis.</p>
+          <div class="folder-meta" data-i18n="f4.meta"><span><b>6</b> itens</span><span class="folder-open">Abrir</span></div>
+        </a>
+
+        <a class="folder navy" href="https://github.com/biacarollin" target="_blank" rel="noopener">
+          <span class="folder-path">github.com/biacarollin</span>
+          <h3>GitHub</h3>
+          <p data-i18n="f5.p">Meus repositórios públicos, com código, documentação de testes e o que mais eu for construindo e estudando pelo caminho.</p>
+          <div class="folder-meta" data-i18n="f5.meta"><span><b>2</b> repositórios</span><span class="folder-open">Abrir no GitHub</span></div>
+        </a>
+
+        <div class="folder dashed">
+          <span class="folder-path">/proxima-pasta</span>
+          <h3 data-i18n="f6.h3">Espaço reservado</h3>
+          <p data-i18n="f6.p">Um lugar guardado para o que vem depois. Novos projetos, estudos e experiências entram aqui conforme forem acontecendo.</p>
+          <div class="folder-meta" data-i18n="f6.meta"><span>Em breve</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="competencias">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="sk.eyebrow">Competências</span>
+        <h2 data-i18n="sk.h2">Três frentes de trabalho</h2>
+        <p data-i18n="sk.p">Qualidade, gestão e processo. Uma parte veio dos cursos e do Turno, a outra de anos cuidando de escalas, registros e pessoas.</p>
+      </div>
+
+      <div class="grid-3 skills">
+        <div>
+          <h3 data-i18n="sk1.h3">Qualidade e teste de software</h3>
+          <ul data-i18n="sk1.ul">
+            <li>Elaboração de cenários e casos de teste</li>
+            <li>Testes funcionais, regressivos e exploratórios</li>
+            <li>Critérios de aceite e evidências de teste</li>
+            <li>Gestão e documentação de defeitos</li>
+            <li>Automação end-to-end com Cypress</li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="sk2.h3">Gestão de projetos e operações</h3>
+          <ul data-i18n="sk2.ul">
+            <li>Liderança de equipes multidisciplinares</li>
+            <li>Planejamento e dimensionamento de escala</li>
+            <li>Controle de produtividade e KPIs</li>
+            <li>Priorização de backlog, Scrum e Kanban</li>
+            <li>Gestão de prazos e contingências</li>
+          </ul>
+        </div>
+        <div>
+          <h3 data-i18n="sk3.h3">Processos e compliance</h3>
+          <ul data-i18n="sk3.ul">
+            <li>Mapeamento e melhoria de processos</li>
+            <li>Rastreabilidade e integridade de dados</li>
+            <li>Redução de glosas e perdas</li>
+            <li>Rotina em ambiente regulado</li>
+            <li>Documentação que outras pessoas conseguem seguir</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tools-wrap">
+        <div class="tools-row">
+          <span class="tools-label" data-i18n="tools.l1">Práticas</span>
+          <div class="tools" data-i18n="tools.t1"><span class="tag blue">Testes manuais</span><span class="tag blue">Testes funcionais</span><span class="tag blue">Regressão</span><span class="tag blue">Exploratório</span><span class="tag blue">Plano de testes</span><span class="tag blue">Casos de teste</span><span class="tag blue">Critérios de aceite</span><span class="tag blue">Gestão de defeitos</span><span class="tag blue">Scrum</span><span class="tag blue">Kanban</span></div>
+        </div>
+        <div class="tools-row">
+          <span class="tools-label" data-i18n="tools.l2">Ferramentas</span>
+          <div class="tools"><span class="tag">Jira</span><span class="tag">Azure DevOps</span><span class="tag">Trello</span><span class="tag">Asana</span><span class="tag">Cypress</span><span class="tag">Git e GitHub</span><span class="tag">Supabase</span><span class="tag">Figma</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="formacao">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="ed.eyebrow">Formação</span>
+        <h2 data-i18n="ed.h2">Formação e certificações principais</h2>
+        <p data-i18n="ed.p">A lista completa, com os cursos de qualidade e métodos ágeis, está na pasta de formação.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card edu">
+          <div class="edu-logo"><img src="assets/img/logo-fam.png" alt="FAM, Centro Universitário das Américas" class="sq"></div>
+          <div>
+            <h3 data-i18n="ed1.h3">Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+            <div class="org">FAM, Centro Universitário das Américas</div>
+          </div>
+          <div class="foot"><span class="tag amber" data-i18n="ed1.tag">Conclusão prevista em dezembro de 2026</span></div>
+        </div>
+        <div class="card edu">
+          <div class="edu-logo"><img src="assets/img/logo-google.png" alt="Google Project Management Certificate"></div>
+          <div>
+            <h3 data-i18n="ed2.h3">Certificado Profissional em Gerenciamento de Projetos</h3>
+            <div class="org" data-i18n="ed2.org">Google, via Coursera. Mais de 140 horas de conteúdo em sete cursos, concluída em agosto de 2026</div>
+          </div>
+          <div class="foot"><span class="tag green" data-i18n="ed2.tag">Concluído</span><a href="https://coursera.org/verify/professional-cert/7GO65ST2BDG8" target="_blank" rel="noopener" data-i18n="verify">Verificar</a></div>
+        </div>
+        <div class="card edu">
+          <div class="edu-logo"><img src="assets/img/logo-pucrs.png" alt="PUC-RS"></div>
+          <div>
+            <h3 data-i18n="ed3.h3">Certificação em Qualidade e Teste de Software</h3>
+            <div class="org" data-i18n="ed3.org">PUC-RS, Escola Politécnica. Novembro de 2025</div>
+          </div>
+          <div class="foot"><span class="tags"><span class="tag green" data-i18n="ed3.tag">Concluído</span><span class="tag" data-i18n="ed3.ext">Extensão</span></span><a href="https://educon.pucrs.br/validarcertificado" target="_blank" rel="noopener" data-i18n="verify">Verificar</a></div>
+        </div>
+      </div>
+      <div class="edu-more">
+        <a class="btn btn-ghost" href="formacao/" data-i18n="ed.more">Ver todas as certificações</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap">
+      <h2 data-i18n="ct.h2">Vamos conversar</h2>
+      <p data-i18n="ct.p">Isso aqui é só parte do que sei fazer. Bora alinhar o resto?</p>
+      <div class="contact-links">
+        <a class="main" href="mailto:abiancacarolline@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          abiancacarolline@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/biacarollin" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span><span data-i18n="ft.made">Feito por</span> <a href="https://github.com/biacarollin" target="_blank" rel="noopener">Biacarollin</a> <span class="heart">♥</span></span>
+    <span><a href="turno/">turno</a> / <a href="qa-turno/">qa-turno</a> / <a href="gestao-de-projetos/">gestao-de-projetos</a> / <a href="formacao/">formacao</a></span>
+  </div>
+</footer>
+
+<script>
+  var EN = {
+    'skip': 'Skip to content',
+    'nav1': 'Path', 'nav2': 'Folders', 'nav3': 'Skills', 'nav4': 'Education', 'nav5': 'Contact',
+    'hero.eyebrow': 'Software quality and project management',
+    'hero.sub': 'From healthcare operations to technology, with the same care for process and records.',
+    'hero.desc': 'More than four years of experience leading teams, schedules and records in regulated healthcare operations, now applied to software testing and project management, with certifications from PUC-RS and Google and a degree in Systems Analysis and Development in progress.',
+    'hero.cta1': 'See the folders',
+    'hero.meta': 'Open to QA, PMO and project management roles',
+    'tr.from': 'Healthcare operations',
+    'tr.to': 'Software quality and management',
+    'tj.eyebrow': 'Path',
+    'tj.h2': 'How I got here',
+    'tj.p': 'I started in sales and customer service, spent years in healthcare operations, and today I study and practice software quality and project management. Each step left a skill I still use.',
+    'tl1.when': 'Before 2021',
+    'tl1.h3': 'Sales, customer service and production',
+    'tl1.where': 'Inside and field sales, customer service in a restaurant, and a small food business of my own selling through a delivery app',
+    'tl1.p': 'In sales, I learned to work with targets, service pace and the customer in front of me. In my own business, I set up and organized the whole operation from scratch, with full responsibility for stock, production and delivery.',
+    'tl1.tags': '<span class="tag">Customer service</span><span class="tag">Targets</span><span class="tag">Organization</span>',
+    'tl2.when': '2021 to 2023',
+    'tl2.h3': 'Team and operations management',
+    'tl2.where': 'Padrão Enfermagem and EnfQualy, healthcare services',
+    'tl2.p': 'Management and leadership of teams with more than 60 nursing professionals across multiple units. Shift planning and sizing, productivity indicators and a redesign of the coverage process, with more than 50 professionals scheduled in Excel and around 10,000 procedures per month monitored in SysCare, reducing billing rejections.',
+    'tl2.tags': '<span class="tag warm">Leadership</span><span class="tag warm">Shift planning</span><span class="tag warm">Indicators</span><span class="tag warm">Fewer billing rejections</span>',
+    'tl3.when': '2024 to 2026',
+    'tl3.h3': 'Hospital pharmacy, dispensing and stock control',
+    'tl3.where': 'INTS, Bertioga Municipal Hospital',
+    'tl3.p': 'High-volume medication dispensing, stock control and invoice checking in a regulated environment.',
+    'tl3.tags': '<span class="tag warm">Regulated environment</span><span class="tag warm">High volume</span>',
+    'tl4.when': '2026 onwards',
+    'tl4.h3': 'Moving into technology: QA and project management',
+    'tl4.where': 'Software Quality and Testing certificate (PUC-RS), Project Management certificate (Google), degree in Systems Analysis and Development (FAM)',
+    'tl4.p': 'Since 2026, I have been applying this practical operations background to real technology projects, covering the full cycle: discovery, requirements, planning, testing and documentation.',
+    'tl4.tags': '<span class="tag blue">Manual testing</span><span class="tag blue">Regression</span><span class="tag blue">Exploratory</span><span class="tag blue">Test plan</span><span class="tag blue">Cypress</span><span class="tag blue">Jira</span><span class="tag blue">Scrum and Kanban</span>',
+    'fd.eyebrow': 'Folders',
+    'fd.h2': 'My work, organized in folders',
+    'fd.p': 'Each folder covers one part of the portfolio. The first four are my own documentation, the fifth leads to the code on GitHub.',
+    'f1.h3': 'Turno, the product',
+    'f1.p': 'A B2B SaaS for shift handover, created from a real problem in healthcare operations. Scope, research, requirements, screens and product decisions.',
+    'f1.meta': '<span><b>19</b> web screens, <b>7</b> mobile screens specified</span><span class="folder-open">Open</span>',
+    'f2.h3': 'Turno QA',
+    'f2.p': 'Test plan, functional, regression and exploratory test cases, manual execution with evidence and bug reports in Jira.',
+    'f2.meta': '<span><b>25</b> test cases executed</span><span class="folder-open">Open</span>',
+    'f3.h3': 'Project management',
+    'f3.p': 'Turno backlog and roadmap, the Google certificate and the management I already practiced in healthcare operations, with schedules, indicators and deadlines.',
+    'f3.meta': '<span>Google certificate</span><span class="folder-open">Open</span>',
+    'f4.h3': 'Education and certificates',
+    'f4.p': 'Degree in Systems Analysis and Development, PUC-RS and Google certificates, and courses in quality and agile methods.',
+    'f4.meta': '<span><b>6</b> items</span><span class="folder-open">Open</span>',
+    'f5.p': 'My public repositories, with code, test documentation and whatever else I build and study along the way.',
+    'f5.meta': '<span><b>2</b> repositories</span><span class="folder-open">Open on GitHub</span>',
+    'f6.h3': 'Reserved space',
+    'f6.p': 'A place saved for what comes next. New projects, studies and experiences will land here as they happen.',
+    'f6.meta': '<span>Coming soon</span>',
+    'sk.eyebrow': 'Skills',
+    'sk.h2': 'Three areas of work',
+    'sk.p': 'Quality, management and process. Part of it came from courses and from Turno, the rest from years taking care of schedules, records and people.',
+    'sk1.h3': 'Software quality and testing',
+    'sk1.ul': '<li>Writing test scenarios and test cases</li><li>Functional, regression and exploratory testing</li><li>Acceptance criteria and test evidence</li><li>Defect management and documentation</li><li>End-to-end automation with Cypress</li>',
+    'sk2.h3': 'Project and operations management',
+    'sk2.ul': '<li>Leading multidisciplinary teams</li><li>Shift planning and sizing</li><li>Productivity control and KPIs</li><li>Backlog prioritization, Scrum and Kanban</li><li>Deadline and contingency management</li>',
+    'sk3.h3': 'Process and compliance',
+    'sk3.ul': '<li>Process mapping and improvement</li><li>Traceability and data integrity</li><li>Reducing billing rejections and losses</li><li>Routine in a regulated environment</li><li>Documentation other people can follow</li>',
+    'tools.l1': 'Practices',
+    'tools.t1': '<span class="tag blue">Manual testing</span><span class="tag blue">Functional testing</span><span class="tag blue">Regression</span><span class="tag blue">Exploratory</span><span class="tag blue">Test plan</span><span class="tag blue">Test cases</span><span class="tag blue">Acceptance criteria</span><span class="tag blue">Defect management</span><span class="tag blue">Scrum</span><span class="tag blue">Kanban</span>',
+    'tools.l2': 'Tools',
+    'ed.eyebrow': 'Education',
+    'ed.h2': 'Main education and certificates',
+    'ed.p': 'The full list, with the quality and agile methods courses, is in the education folder.',
+    'ed1.h3': 'Associate degree in Systems Analysis and Development',
+    'ed1.tag': 'Expected completion in December 2026',
+    'ed2.h3': 'Google Project Management Professional Certificate',
+    'ed2.org': 'Google, via Coursera. More than 140 hours of content across seven courses, completed in August 2026',
+    'ed2.tag': 'Completed',
+    'ed3.h3': 'Software Quality and Testing Certificate',
+    'ed3.org': 'PUC-RS, Polytechnic School. November 2025',
+    'ed3.tag': 'Completed',
+    'ed3.ext': 'Extension course',
+    'verify': 'Verify',
+    'ed.more': 'See all certificates',
+    'ct.h2': "Let's talk",
+    'ct.p': "This is only part of what I can do. Shall we go through the rest?",
+    'ft.made': 'Made by'
+  };
+  var TITLES = { pt: 'Bianca Carvalho | QA e Gestão de Projetos', en: 'Bianca Carvalho | QA and Project Management' };
+</script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

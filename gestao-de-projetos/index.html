@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestão de projetos | Bianca Carvalho</title>
+<meta name="description" content="Pasta de gestão de projetos de Bianca Carvalho: backlog e roadmap do Turno, certificação do Google e gestão aplicada em operações de saúde.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  .car { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 18px 0; }
+  .car .card { padding: 18px 20px; }
+  .car h4 { font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--warm-ink); margin-bottom: 6px; }
+  .car p { font-size: 15px; margin: 0; }
+  .backlog { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 18px 0; }
+  .item { display: grid; grid-template-columns: 110px 1fr auto; gap: 14px; align-items: center; padding: 12px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); font-size: 14.5px; }
+  .item .id { font-family: var(--mono); font-size: 12.5px; color: var(--ink-3); }
+  .item .t { color: var(--ink); font-weight: 600; }
+  .slots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0; }
+  .slot { padding: 18px; border: 1px dashed var(--line-2); border-radius: var(--radius-sm); }
+  .slot h4 { font-size: 15px; margin-bottom: 6px; }
+  .slot p { font-size: 14.5px; margin: 0; color: var(--ink-3); }
+  @media (max-width: 720px) { .item { grid-template-columns: 1fr; gap: 6px; } .slots { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
+<div class="topline"></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../"><span class="brand-dot"></span>Bianca Carvalho</a>
+    <nav class="nav-links" aria-label="Pastas">
+      <a href="../#pastas" data-i18n="nav.all">Todas as pastas</a>
+      <a href="../turno/">turno</a>
+      <a href="../qa-turno/">qa-turno</a>
+      <a href="../formacao/">formacao</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="https://github.com/biacarollin" target="_blank" rel="noopener">GitHub</a>
+      <div class="lang" role="group" aria-label="Idioma">
+        <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT</button>
+        <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+  <header class="case-head">
+    <div class="wrap">
+      <div class="crumbs"><a href="../">inicio</a><span>/</span><b>gestao-de-projetos</b></div>
+      <span class="eyebrow warm" data-i18n="h.eyebrow">Gestão de projetos</span>
+      <h1 data-i18n="h.h1">Gestão de projetos</h1>
+      <p class="lead" data-i18n="h.lead">Esta pasta junta duas coisas: a gestão que já praticava à frente de equipes de saúde e a gestão que estou aplicando em tecnologia, no Turno e nos estudos.</p>
+      <div class="tags" data-i18n="h.tags">
+        <span class="tag warm">Certificação Google</span>
+        <span class="tag">Scrum e Kanban</span>
+        <span class="tag">Jira, Asana, Trello, Azure DevOps</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap case-body">
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">01</div><h2 data-i18n="s1.h2">Formação</h2></div>
+      <div class="case-content" data-i18n="s1">
+        <p class="lede">Certificação Profissional em Gerenciamento de Projetos do Google, concluída pela Coursera.</p>
+        <p>O programa cobre o ciclo de vida de um projeto, do termo de abertura ao encerramento, com planejamento, gestão de riscos, comunicação e métodos ágeis. O que mais uso no dia a dia são as práticas de definição de escopo, priorização e documentação de decisões.</p>
+        <div class="tags">
+          <span class="tag">Termo de abertura</span><span class="tag">Escopo e requisitos</span><span class="tag">Riscos</span><span class="tag">Comunicação</span><span class="tag">Scrum</span><span class="tag">Kanban</span><span class="tag">Retrospectivas</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">02</div><h2 data-i18n="s2.h2">Gestão do Turno</h2></div>
+      <div class="case-content" data-i18n="s2">
+        <p>No Turno eu ocupo o papel de gestão do produto e do projeto. O escopo foi definido depois de uma pesquisa com 15 profissionais de cargos diferentes, e desde então o trabalho é organizado em um backlog priorizado, com critérios de aceite por item e um roadmap em três fases.</p>
+
+        <h3>Roadmap</h3>
+        <div class="phases">
+          <div class="phase">
+            <span class="tag green">Concluído</span>
+            <h4>Descoberta e escopo</h4>
+            <ul>
+              <li>Problema identificado a partir da vivência em operação de saúde</li>
+              <li>Pesquisa com 15 profissionais</li>
+              <li>Decisão de generalizar para vários segmentos</li>
+              <li>Requisitos, critérios de aceite e backlog inicial</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <span class="tag amber">Em andamento</span>
+            <h4>MVP</h4>
+            <ul>
+              <li>Passagem de turno com IA e assinatura digital</li>
+              <li>Painel da gestão, equipe e ausências</li>
+              <li>Planos e checkout com Stripe</li>
+              <li>Primeira rodada de QA e correção do TQ-3</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <span class="tag">Planejado</span>
+            <h4>Antes de qualquer lançamento</h4>
+            <ul>
+              <li>Reexecução da suíte de testes depois das correções</li>
+              <li>Múltiplas filiais e exportação em PDF</li>
+              <li>Revisão de LGPD</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Como um item do backlog é escrito</h3>
+        <p>Cada item tem um identificador, uma descrição no formato de história de usuário, critérios de aceite verificáveis e uma prioridade. Os critérios de aceite são os mesmos que a pasta de QA usa para escrever os casos de teste, o que mantém produto e qualidade falando a mesma língua.</p>
+        <div class="backlog">
+          <div class="item"><span class="id">TRN-12</span><span class="t">Como colaborador, quero fechar o turno e ter um resumo gerado para que o próximo turno leia em um minuto</span><span class="tag red">Crítica</span></div>
+          <div class="item"><span class="id">TRN-15</span><span class="t">Como gestora, quero aprovar ou recusar pedidos de folga no painel</span><span class="tag amber">Alta</span></div>
+          <div class="item"><span class="id">TRN-21</span><span class="t">Como gestora, quero convidar membros por link com o papel já definido</span><span class="tag amber">Alta</span></div>
+          <div class="item"><span class="id">TRN-30</span><span class="t">Como organização, quero exportar o histórico de passagens em PDF</span><span class="tag">Média</span></div>
+        </div>
+        <dl class="kv">
+          <dt>Exemplo</dt><dd>TRN-12, critérios de aceite</dd>
+          <dt>Dado</dt><dd>um colaborador autenticado com turno ativo</dd>
+          <dt>Quando</dt><dd>ele preenche o fechamento e salva</dd>
+          <dt>Então</dt><dd>a passagem fica registrada com resumo por IA, assinatura digital vinculada ao usuário e aparece no histórico da organização</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">03</div><h2 data-i18n="s3.h2">Gestão aplicada em operações</h2></div>
+      <div class="case-content" data-i18n="s3">
+        <p>Antes de qualquer curso, eu já geria escala, indicador e prazo. Dois casos de operação de saúde, no formato contexto, ação e resultado.</p>
+
+        <h3>Cobertura de plantões em 15 unidades</h3>
+        <div class="car">
+          <div class="card"><h4>Contexto</h4><p>Padrão Enfermagem Brasil, equipe de mais de 60 técnicos de enfermagem distribuídos em mais de 15 unidades. Faltas eram cobertas por telefone, no improviso, e cada ausência virava uma corrida contra o relógio.</p></div>
+          <div class="card"><h4>Ação</h4><p>Mapeamento do processo de cobertura e redesenho com um profissional fixo por região, acionado de imediato em caso de ausência. Planejamento e dimensionamento de escala com controle de indicadores de produtividade.</p></div>
+          <div class="card"><h4>Resultado</h4><p>Redução do índice de faltas descobertas e tempo de resposta previsível, sem depender de quem estava de plantão no administrativo naquele dia.</p></div>
+        </div>
+
+        <h3>Integridade de 10.000 procedimentos por mês</h3>
+        <div class="car">
+          <div class="card"><h4>Contexto</h4><p>EnfQualy, atendimento domiciliar com profissionais alocados por paciente. O volume de procedimentos realizados mensalmente precisava de registro no SysCare para viabilizar o faturamento junto à operadora do plano.</p></div>
+          <div class="card"><h4>Ação</h4><p>Escala dimensionada em Excel com alocação por paciente e cobertura de plantões. Validação de preenchimento e conferência de evidências de cada procedimento. Ponto focal com a operadora, negociando prazos e fechamento de atendimentos.</p></div>
+          <div class="card"><h4>Resultado</h4><p>Redução de glosas no faturamento e um histórico de atendimentos que resistia a auditoria.</p></div>
+        </div>
+
+        <p>É esse mesmo cuidado com registro, evidência e prazo que hoje vai para backlog, critério de aceite e relatório de bug.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">04</div><h2 data-i18n="s4.h2">Espaço para o que vem</h2></div>
+      <div class="case-content" data-i18n="s4">
+        <p>Esta pasta vai crescer junto com a transição. Os espaços abaixo estão reservados para os próximos materiais.</p>
+        <div class="slots">
+          <div class="slot"><h4>Modelos de documentos</h4><p>Termo de abertura, plano de comunicação e matriz de riscos usados no Turno.</p></div>
+          <div class="slot"><h4>Retrospectivas do Turno</h4><p>Registro do que funcionou e do que mudou a cada ciclo.</p></div>
+          <div class="slot"><h4>Novos projetos</h4><p>Cases de gestão em outros contextos, voluntários ou de estudo.</p></div>
+          <div class="slot"><h4>Estudos</h4><p>Anotações e certificações complementares em métodos ágeis e PMO.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <a class="next-folder" href="../turno/">
+      <div data-i18n="next">
+        <span class="folder-path">voltar para: /turno</span>
+        <h3>Turno, o produto</h3>
+        <p>O case de produto que dá origem ao backlog desta pasta.</p>
+      </div>
+      <span class="btn btn-ghost" data-i18n="open">Abrir</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span><span data-i18n="ft.made">Feito por</span> <a href="https://github.com/biacarollin" target="_blank" rel="noopener">Biacarollin</a> <span class="heart">♥</span></span>
+    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../turno/">turno</a> / <a href="../qa-turno/">qa-turno</a> / <a href="../formacao/">formacao</a></span>
+  </div>
+</footer>
+
+<script>
+  var TITLES = { pt: 'Gestão de projetos | Bianca Carvalho', en: 'Project management | Bianca Carvalho' };
+  var EN = {
+    'skip': 'Skip to content',
+    'nav.all': 'All folders',
+    'h.eyebrow': 'Project management',
+    'h.h1': 'Project management',
+    'h.lead': 'This folder brings two things together: the management I already practiced coordinating healthcare teams, and the management I am now applying in technology, on Turno and in my studies.',
+    'h.tags': '<span class="tag warm">Google certificate</span><span class="tag">Scrum and Kanban</span><span class="tag">Jira, Asana, Trello, Azure DevOps</span>',
+    's1.h2': 'Education',
+    's1': '<p class="lede">Google Project Management Professional Certificate, completed through Coursera.</p><p>The program covers the life cycle of a project, from charter to closing, with planning, risk management, communication and agile methods. What I use most day to day are the practices for defining scope, prioritizing and documenting decisions.</p><div class="tags"><span class="tag">Project charter</span><span class="tag">Scope and requirements</span><span class="tag">Risks</span><span class="tag">Communication</span><span class="tag">Scrum</span><span class="tag">Kanban</span><span class="tag">Retrospectives</span></div>',
+    's2.h2': 'Managing Turno',
+    's2': '<p>On Turno I hold the product and project management role. The scope was defined after research with 15 professionals in different roles, and since then the work has been organized in a prioritized backlog, with acceptance criteria per item and a three-phase roadmap.</p><h3>Roadmap</h3><div class="phases"><div class="phase"><span class="tag green">Done</span><h4>Discovery and scope</h4><ul><li>Problem identified from experience in healthcare operations</li><li>Research with 15 professionals</li><li>Decision to generalize to several segments</li><li>Requirements, acceptance criteria and initial backlog</li></ul></div><div class="phase"><span class="tag amber">In progress</span><h4>MVP</h4><ul><li>Shift handover with AI and digital signature</li><li>Manager dashboard, team and absences</li><li>Plans and checkout with Stripe</li><li>First QA round and TQ-3 fix</li></ul></div><div class="phase"><span class="tag">Planned</span><h4>Before any launch</h4><ul><li>Re-run of the test suite after the fixes</li><li>Multiple branches and PDF export</li><li>LGPD (Brazilian data protection law) review</li></ul></div></div><h3>How a backlog item is written</h3><p>Each item has an identifier, a description in user story format, verifiable acceptance criteria and a priority. The acceptance criteria are the same ones the QA folder uses to write the test cases, which keeps product and quality speaking the same language.</p><div class="backlog"><div class="item"><span class="id">TRN-12</span><span class="t">As a collaborator, I want to close my shift and have a summary generated so the next shift can read it in one minute</span><span class="tag red">Critical</span></div><div class="item"><span class="id">TRN-15</span><span class="t">As a manager, I want to approve or reject time-off requests on the dashboard</span><span class="tag amber">High</span></div><div class="item"><span class="id">TRN-21</span><span class="t">As a manager, I want to invite members by link with the role already set</span><span class="tag amber">High</span></div><div class="item"><span class="id">TRN-30</span><span class="t">As an organization, I want to export the handover history as PDF</span><span class="tag">Medium</span></div></div><dl class="kv"><dt>Example</dt><dd>TRN-12, acceptance criteria</dd><dt>Given</dt><dd>an authenticated collaborator with an active shift</dd><dt>When</dt><dd>they fill in the shift close and save</dd><dt>Then</dt><dd>the handover is recorded with an AI summary and a digital signature linked to the user, and appears in the organization history</dd></dl>',
+    's3.h2': 'Management applied in operations',
+    's3': '<p>Before any course, I was already managing schedules, indicators and deadlines. Two cases from healthcare operations, in the context, action and result format.</p><h3>Shift coverage across 15 units</h3><div class="car"><div class="card"><h4>Context</h4><p>Padrão Enfermagem Brasil, a team of more than 60 nursing technicians spread across more than 15 units. Absences were covered by phone, improvised, and each one became a race against the clock.</p></div><div class="card"><h4>Action</h4><p>Mapped the coverage process and redesigned it with a fixed professional per region, called immediately in case of absence. Shift planning and sizing with productivity indicators.</p></div><div class="card"><h4>Result</h4><p>Fewer uncovered absences and a predictable response time, no longer depending on who was on duty in the office that day.</p></div></div><h3>Data integrity for 10,000 procedures a month</h3><div class="car"><div class="card"><h4>Context</h4><p>EnfQualy, home care with professionals assigned per patient. The volume of procedures performed each month needed to be recorded in SysCare to enable billing to the health plan operator.</p></div><div class="card"><h4>Action</h4><p>Schedule sized in Excel with assignment per patient and shift coverage. Validation of records and checking of evidence for each procedure. Point of contact with the operator, negotiating deadlines and closing visits.</p></div><div class="card"><h4>Result</h4><p>Fewer billing rejections and a history of visits that stood up to audit.</p></div></div><p>It is the same care with records, evidence and deadlines that now goes into backlog items, acceptance criteria and bug reports.</p>',
+    's4.h2': 'Room for what comes next',
+    's4': '<p>This folder will grow along with the transition. The spaces below are reserved for the next materials.</p><div class="slots"><div class="slot"><h4>Document templates</h4><p>Project charter, communication plan and risk matrix used on Turno.</p></div><div class="slot"><h4>Turno retrospectives</h4><p>A record of what worked and what changed in each cycle.</p></div><div class="slot"><h4>New projects</h4><p>Management cases in other contexts, volunteer or study.</p></div><div class="slot"><h4>Studies</h4><p>Notes and complementary certificates in agile methods and PMO.</p></div></div>',
+    'next': '<span class="folder-path">back to: /turno</span><h3>Turno, the product</h3><p>The product case that feeds the backlog in this folder.</p>',
+    'open': 'Open',
+    'ft.made': 'Made by',
+    'ft.home': 'home'
+  };
+</script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

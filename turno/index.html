@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turno, o produto | Bianca Carvalho</title>
+<meta name="description" content="Case de produto do Turno, SaaS B2B de passagem de turno: problema, pesquisa, escopo, funcionalidades, telas e decisões técnicas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0; }
+  .feature { padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+  .feature h4 { font-size: 15px; margin-bottom: 6px; }
+  .feature p { font-size: 14.5px; margin: 0; }
+  .screens { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0; }
+  .screens .card { padding: 20px; }
+  .screens h4 { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-size: 15px; margin-bottom: 10px; }
+  .screens h4 .mono { color: var(--ink-3); font-weight: 400; }
+  .screens li { font-size: 14.5px; }
+  @media (max-width: 720px) { .features, .screens { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
+<div class="topline"></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../"><span class="brand-dot"></span>Bianca Carvalho</a>
+    <nav class="nav-links" aria-label="Pastas">
+      <a href="../#pastas" data-i18n="nav.all">Todas as pastas</a>
+      <a href="../qa-turno/">qa-turno</a>
+      <a href="../gestao-de-projetos/">gestao-de-projetos</a>
+      <a href="../formacao/">formacao</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="https://github.com/biacarollin/Turno" target="_blank" rel="noopener" data-i18n="nav.cta">Repositório</a>
+      <div class="lang" role="group" aria-label="Idioma">
+        <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT</button>
+        <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+  <header class="case-head">
+    <div class="wrap">
+      <div class="crumbs"><a href="../">inicio</a><span>/</span><b>turno</b></div>
+      <span class="eyebrow" data-i18n="h.eyebrow">Produto</span>
+      <h1>Turno</h1>
+      <p class="lead" data-i18n="h.lead">Um SaaS B2B de passagem de turno para equipes que trabalham em escala. Nasceu de um problema que eu vivia todo dia coordenando equipes de saúde: a informação do turno se perdia entre grupos de WhatsApp e cadernos.</p>
+      <div class="tags" data-i18n="h.tags">
+        <span class="tag blue">Projeto de portfólio</span>
+        <span class="tag">Fevereiro de 2026 até hoje</span>
+        <span class="tag">Sem finalidade comercial</span>
+        <span class="tag amber">Em desenvolvimento</span>
+      </div>
+      <div class="case-links">
+        <a class="btn btn-primary" href="https://www.turnoai.com.br" target="_blank" rel="noopener">turnoai.com.br</a>
+        <a class="btn btn-ghost" href="https://github.com/biacarollin/Turno" target="_blank" rel="noopener" data-i18n="h.link2">Código no GitHub</a>
+        <a class="btn btn-ghost" href="../qa-turno/" data-i18n="h.link3">Ver a pasta de QA</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap case-body">
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">01</div><h2 data-i18n="s1.h2">O problema</h2></div>
+      <div class="case-content" data-i18n="s1">
+        <p class="lede">Em diferentes setores da saúde, a passagem de turno acontecia por WhatsApp, por caderno ou de boca em boca. Cada canal tinha o seu jeito de perder informação importante.</p>
+        <p>Quem entrava no turno precisava reler mensagens soltas, procurar um caderno que nem sempre estava no lugar ou confiar na memória de quem estava saindo. Quando algo dava errado, não havia como saber o que tinha sido comunicado, para quem e quando.</p>
+        <p>Isso não era falta de disciplina da equipe. Era ausência de um sistema.</p>
+        <div class="compare">
+          <div class="card before">
+            <h4>Antes</h4>
+            <ul>
+              <li>Passagem por WhatsApp, sem estrutura fixa</li>
+              <li>Passagem por caderno físico, sem cópia</li>
+              <li>Passagem de boca em boca, sem registro</li>
+              <li>Nenhuma forma de auditar o que foi dito</li>
+            </ul>
+          </div>
+          <div class="card after">
+            <h4>Com o Turno</h4>
+            <ul>
+              <li>Um canal único e estruturado por turno</li>
+              <li>Resumo gerado por IA no fechamento</li>
+              <li>Registro assinado digitalmente</li>
+              <li>Histórico permanente e pesquisável</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">02</div><h2 data-i18n="s2.h2">Pesquisa e escopo</h2></div>
+      <div class="case-content" data-i18n="s2">
+        <p>Antes de definir o escopo, conversei com 15 profissionais de cargos diferentes, entre gestão, enfermagem, administrativo e farmácia, para confirmar se a dor se repetia fora do meu contexto. Repetia. A partir daí, o produto foi definido com requisitos, critérios de aceite e um backlog priorizado em Scrum e Kanban.</p>
+        <h3>A decisão que definiu o rumo do produto</h3>
+        <dl class="kv">
+          <dt>Pergunta</dt><dd>Restringir o Turno à saúde ou generalizar para qualquer operação em turnos?</dd>
+          <dt>Decisão</dt><dd>Generalizar. A saúde é o primeiro caso de uso e a prova de conceito, não o teto do produto.</dd>
+          <dt>Motivo</dt><dd>Um produto vertical em saúde exige compliance regulatório pesado desde o primeiro dia e endereça um mercado menor. A dor central, passar o turno sem perder informação, existe em logística, hotelaria, segurança e indústria.</dd>
+          <dt>Custo</dt><dd>Mensagens de marketing mais genéricas no início e a necessidade de validar a dor em pelo menos um segmento fora da saúde antes de afirmar o encaixe.</dd>
+        </dl>
+        <h3>O que entrou no MVP</h3>
+        <ul>
+          <li>Passagem de turno com resumo por IA como núcleo, não como extra</li>
+          <li>Ocorrências com tipo, severidade e local</li>
+          <li>Painel da gestão com aprovações e indicadores</li>
+          <li>Planos e cobrança integrados desde o início</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">03</div><h2 data-i18n="s3.h2">O produto</h2></div>
+      <div class="case-content" data-i18n="s3">
+        <p>O Turno substitui a comunicação informal por registros assinados, resumos gerados por IA e um histórico auditável. Ele tem duas superfícies: a web, usada pela gestão, e a visão do colaborador, usada por quem está cumprindo o turno.</p>
+        <div class="features">
+          <div class="feature">
+            <h4>Passagem de turno</h4>
+            <p>Fechamento por formulário, resumo por IA e assinatura digital com hash SHA-256. A validação por PIN está especificada e ainda não foi exposta na interface.</p>
+          </div>
+          <div class="feature">
+            <h4>Ocorrências</h4>
+            <p>Registro com tipo, severidade e local. Ocorrências críticas são destacadas automaticamente para o próximo turno.</p>
+          </div>
+          <div class="feature">
+            <h4>Painel da gestão</h4>
+            <p>Resumo diário das passagens, aprovação de folgas e trocas de turno, e indicadores da equipe.</p>
+          </div>
+          <div class="feature">
+            <h4>Gestão de equipe</h4>
+            <p>Convite por link, papéis configuráveis e gestão de ausências.</p>
+          </div>
+          <div class="feature">
+            <h4>Planos e cobrança</h4>
+            <p>Três planos, Free, Basic e Team, com checkout, portal do cliente e webhooks via Stripe.</p>
+          </div>
+          <div class="feature">
+            <h4>Visão do colaborador</h4>
+            <p>Interface simplificada para consultar a escala, registrar a passagem e pedir folga ou troca.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">04</div><h2 data-i18n="s4.h2">Telas</h2></div>
+      <div class="case-content" data-i18n="s4">
+        <p>Foram construídas 19 telas da aplicação web e especificadas 7 telas do aplicativo mobile. Abaixo, como elas se agrupam.</p>
+        <div class="screens">
+          <div class="card">
+            <h4>Aplicação web <span class="mono">19 telas construídas</span></h4>
+            <ul>
+              <li>Autenticação e onboarding da organização</li>
+              <li>Painel da gestão e resumo diário</li>
+              <li>Escala, cobertura e histórico de turnos</li>
+              <li>Passagem de turno, ocorrências e assinatura</li>
+              <li>Equipe, convites, papéis e ausências</li>
+              <li>Planos, checkout e portal de cobrança</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Aplicativo mobile <span class="mono">7 telas especificadas</span></h4>
+            <ul>
+              <li>Login e escala do colaborador</li>
+              <li>Turno ativo e registro da passagem</li>
+              <li>Leitura da passagem recebida</li>
+              <li>Registro de ocorrência</li>
+              <li>Pedido de folga e troca</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">05</div><h2 data-i18n="s5.h2">Stack e decisões técnicas</h2></div>
+      <div class="case-content" data-i18n="s5">
+        <p>O desenvolvimento foi assistido por IA. As decisões de arquitetura, hospedagem e conformidade continuam sendo minhas, o que exige entender o que está por trás do código gerado, principalmente por se tratar de dados de funcionários e escalas de trabalho.</p>
+        <div class="tags" style="margin: 14px 0 22px">
+          <span class="tag">TanStack Start</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind v4</span><span class="tag">shadcn/ui</span><span class="tag">Supabase</span><span class="tag">PostgreSQL com RLS</span><span class="tag">Stripe</span>
+        </div>
+        <h3>Três decisões que moldaram o sistema</h3>
+        <ol class="steps">
+          <li><b>Isolamento de dados por Row Level Security</b>Cada organização e filial só enxerga os próprios registros, garantido no banco e não apenas na interface.</li>
+          <li><b>IA em contexto controlado</b>O resumo por IA acontece só no fechamento do turno, com contexto delimitado. Não há chat aberto, o que mantém custo e comportamento previsíveis.</li>
+          <li><b>Limites de plano no banco</b>As regras de cada plano são aplicadas por migrations no PostgreSQL, e não por validação no front-end, para que não possam ser contornadas.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-num"><div class="n">06</div><h2 data-i18n="s6.h2">Onde está agora</h2></div>
+      <div class="case-content" data-i18n="s6">
+        <div class="callout">
+          <p><strong>Situação atual.</strong> O Turno está em desenvolvimento ativo, sem lançamento comercial e sem usuários externos. Por isso este case não apresenta métricas de adoção. O que ele mostra é o raciocínio por trás de cada decisão até aqui.</p>
+        </div>
+        <h3>Pendências conhecidas</h3>
+        <ul>
+          <li>Operação com múltiplas filiais</li>
+          <li>Aplicativo mobile nativo</li>
+          <li>Exportação de relatórios em PDF</li>
+          <li>Revisão de LGPD antes de qualquer lançamento</li>
+        </ul>
+        <h3>O que essa fase ensinou</h3>
+        <ul>
+          <li>Nascer de um problema vivido ajuda na descoberta, mas exige checar se a dor se repete fora do contexto de origem. Foi isso que levou à decisão de generalizar cedo.</li>
+          <li>Documentar decisões antes do lançamento, e não depois, é o que torna o processo revisável, inclusive por mim.</li>
+          <li>Um produto em mudança rápida precisa de uma camada de qualidade separada. Ela está na pasta ao lado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <a class="next-folder" href="../qa-turno/">
+      <div data-i18n="next">
+        <span class="folder-path">próxima pasta: /qa-turno</span>
+        <h3>QA do Turno</h3>
+        <p>Plano de testes, 25 casos executados, bugs no Jira e matriz de rastreabilidade.</p>
+      </div>
+      <span class="btn btn-ghost" data-i18n="open">Abrir</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span><span data-i18n="ft.made">Feito por</span> <a href="https://github.com/biacarollin" target="_blank" rel="noopener">Biacarollin</a> <span class="heart">♥</span></span>
+    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../qa-turno/">qa-turno</a> / <a href="../gestao-de-projetos/">gestao-de-projetos</a> / <a href="../formacao/">formacao</a></span>
+  </div>
+</footer>
+
+<script>
+  var TITLES = { pt: 'Turno, o produto | Bianca Carvalho', en: 'Turno, the product | Bianca Carvalho' };
+  var EN = {
+    'skip': 'Skip to content',
+    'nav.all': 'All folders',
+    'nav.cta': 'Repository',
+    'h.eyebrow': 'Product',
+    'h.lead': 'A B2B SaaS for shift handover, built for teams that work in shifts. It came from a problem I faced every day coordinating healthcare teams: shift information got lost between WhatsApp groups and paper notebooks.',
+    'h.tags': '<span class="tag blue">Portfolio project</span><span class="tag">February 2026 to today</span><span class="tag">Non-commercial</span><span class="tag amber">In development</span>',
+    'h.link2': 'Code on GitHub',
+    'h.link3': 'See the QA folder',
+    's1.h2': 'The problem',
+    's1': '<p class="lede">Across different healthcare settings, shift handover happened through WhatsApp, a notebook or word of mouth. Each channel had its own way of losing important information.</p><p>Whoever started the shift had to reread loose messages, look for a notebook that was not always in place, or trust the memory of the person leaving. When something went wrong, there was no way to know what had been communicated, to whom and when.</p><p>This was not a lack of discipline from the team. It was the absence of a system.</p><div class="compare"><div class="card before"><h4>Before</h4><ul><li>Handover by WhatsApp, with no fixed structure</li><li>Handover by paper notebook, with no copy</li><li>Handover by word of mouth, with no record</li><li>No way to audit what was said</li></ul></div><div class="card after"><h4>With Turno</h4><ul><li>One structured channel per shift</li><li>AI-generated summary at shift close</li><li>Digitally signed record</li><li>Permanent, searchable history</li></ul></div></div>',
+    's2.h2': 'Research and scope',
+    's2': '<p>Before defining the scope, I talked to 15 professionals in different roles, including management, nursing, administration and pharmacy, to confirm that the pain existed outside my own context. It did. From there, the product was defined with requirements, acceptance criteria and a prioritized backlog in Scrum and Kanban.</p><h3>The decision that set the direction of the product</h3><dl class="kv"><dt>Question</dt><dd>Restrict Turno to healthcare, or generalize it to any shift-based operation?</dd><dt>Decision</dt><dd>Generalize. Healthcare is the first use case and the proof of concept, not the ceiling of the product.</dd><dt>Reason</dt><dd>A vertical healthcare product requires heavy regulatory compliance from day one and addresses a smaller market. The core pain, handing over a shift without losing information, exists in logistics, hospitality, security and industry.</dd><dt>Cost</dt><dd>More generic marketing messages at first, and the need to validate the pain in at least one segment outside healthcare before claiming fit.</dd></dl><h3>What went into the MVP</h3><ul><li>Shift handover with AI summary as the core, not an extra</li><li>Incidents with type, severity and location</li><li>Manager dashboard with approvals and indicators</li><li>Plans and billing integrated from the start</li></ul>',
+    's3.h2': 'The product',
+    's3': '<p>Turno replaces informal communication with signed records, AI-generated summaries and an auditable history. It has two surfaces: the web app, used by management, and the collaborator view, used by whoever is on shift.</p><div class="features"><div class="feature"><h4>Shift handover</h4><p>Form-based closing, AI summary and digital signature with a SHA-256 hash. PIN validation is specified but not yet exposed in the interface.</p></div><div class="feature"><h4>Incidents</h4><p>Records with type, severity and location. Critical incidents are automatically highlighted for the next shift.</p></div><div class="feature"><h4>Manager dashboard</h4><p>Daily summary of handovers, approval of time off and shift swaps, and team indicators.</p></div><div class="feature"><h4>Team management</h4><p>Invitation by link, configurable roles and absence management.</p></div><div class="feature"><h4>Plans and billing</h4><p>Three plans, Free, Basic and Team, with checkout, customer portal and webhooks through Stripe.</p></div><div class="feature"><h4>Collaborator view</h4><p>A simplified interface to check the schedule, record the handover and request time off or a swap.</p></div></div>',
+    's4.h2': 'Screens',
+    's4': '<p>19 screens of the web app were built and 7 screens of the mobile app were specified. Below, how they are grouped.</p><div class="screens"><div class="card"><h4>Web app <span class="mono">19 screens built</span></h4><ul><li>Authentication and organization onboarding</li><li>Manager dashboard and daily summary</li><li>Schedule, coverage and shift history</li><li>Shift handover, incidents and signature</li><li>Team, invitations, roles and absences</li><li>Plans, checkout and billing portal</li></ul></div><div class="card"><h4>Mobile app <span class="mono">7 screens specified</span></h4><ul><li>Login and collaborator schedule</li><li>Active shift and handover recording</li><li>Reading the received handover</li><li>Incident recording</li><li>Time off and swap requests</li></ul></div></div>',
+    's5.h2': 'Stack and technical decisions',
+    's5': '<p>Development was AI-assisted. Architecture, hosting and compliance decisions remain mine, which means understanding what is behind the generated code, especially since the product handles employee data and work schedules.</p><div class="tags" style="margin: 14px 0 22px"><span class="tag">TanStack Start</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind v4</span><span class="tag">shadcn/ui</span><span class="tag">Supabase</span><span class="tag">PostgreSQL with RLS</span><span class="tag">Stripe</span></div><h3>Three decisions that shaped the system</h3><ol class="steps"><li><b>Data isolation through Row Level Security</b>Each organization and branch only sees its own records, enforced in the database and not only in the interface.</li><li><b>AI in a controlled context</b>The AI summary happens only at shift close, with a limited context. There is no open chat, which keeps cost and behavior predictable.</li><li><b>Plan limits in the database</b>The rules of each plan are applied through PostgreSQL migrations, not front-end validation, so they cannot be bypassed.</li></ol>',
+    's6.h2': 'Where it is now',
+    's6': '<div class="callout"><p><strong>Current status.</strong> Turno is in active development, with no commercial launch and no external users. That is why this case does not show adoption metrics. What it shows is the reasoning behind each decision so far.</p></div><h3>Known gaps</h3><ul><li>Multi-branch operation</li><li>Native mobile app</li><li>PDF report export</li><li>LGPD (Brazilian data protection law) review before any launch</li></ul><h3>What this phase taught me</h3><ul><li>Starting from a problem you lived through helps discovery, but you still have to check whether the pain repeats outside the original context. That is what led to the decision to generalize early.</li><li>Documenting decisions before launch, not after, is what makes the process reviewable, including by me.</li><li>A fast-changing product needs a separate quality layer. It lives in the next folder.</li></ul>',
+    'next': '<span class="folder-path">next folder: /qa-turno</span><h3>Turno QA</h3><p>Test plan, 25 test cases executed, bugs in Jira and a traceability matrix.</p>',
+    'open': 'Open',
+    'ft.made': 'Made by',
+    'ft.home': 'home'
+  };
+</script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
