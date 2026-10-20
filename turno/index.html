@@ -31,7 +31,7 @@
     <a class="brand" href="../"><span class="brand-dot"></span>Bianca Carvalho</a>
     <nav class="nav-links" aria-label="Pastas">
       <a href="../#pastas" data-i18n="nav.all">Todas as pastas</a>
-      <a href="../qa-turno/" data-i18n="nav.qa">QA do Turno</a>
+      <a href="../qa/" data-i18n="nav.qa">QA</a>
       <a href="../gestao-de-projetos/" data-i18n="nav.pm">Gestão de projetos</a>
       <a href="../formacao/" data-i18n="nav.edu">Formação</a>
     </nav>
@@ -63,7 +63,7 @@
       </div>
       <div class="case-links">
         <a class="btn btn-primary" href="https://github.com/biacarollin/Turno" target="_blank" rel="noopener" data-i18n="h.link2">Código no GitHub</a>
-        <a class="btn btn-ghost" href="../qa-turno/" data-i18n="h.link3">Ver a pasta de QA</a>
+        <a class="btn btn-ghost" href="../qa/" data-i18n="h.link3">Ver a pasta de QA</a>
       </div>
     </div>
   </header>
@@ -221,10 +221,10 @@
       </div>
     </section>
 
-    <a class="next-folder" href="../qa-turno/">
+    <a class="next-folder" href="../qa/">
       <div data-i18n="next">
-        <span class="folder-path">próxima pasta: /qa-turno</span>
-        <h3>QA do Turno</h3>
+        <span class="folder-path">próxima pasta: /qa</span>
+        <h3>QA</h3>
         <p>Plano de testes, 25 casos executados, bugs no Jira e matriz de rastreabilidade.</p>
       </div>
       <span class="btn btn-ghost" data-i18n="open">Abrir</span>
@@ -235,7 +235,7 @@
 <footer class="footer">
   <div class="wrap footer-in">
     <span><span data-i18n="ft.made">Feito por</span> <a href="https://github.com/biacarollin" target="_blank" rel="noopener">Biacarollin</a> <span class="heart">♥</span></span>
-    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../qa-turno/">qa-turno</a> / <a href="../gestao-de-projetos/">gestao-de-projetos</a> / <a href="../formacao/">formacao</a> / <a href="../operacoes/">operacoes</a></span>
+    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../qa/">qa</a> / <a href="../gestao-de-projetos/">gestao-de-projetos</a> / <a href="../formacao/">formacao</a> / <a href="../operacoes/">operacoes</a> / <a href="../dashboards/">dashboards</a></span>
   </div>
 </footer>
 
@@ -245,7 +245,7 @@
     'skip': 'Skip to content',
     'nav.all': 'All folders',
     'nav.turno': 'Turno',
-    'nav.qa': 'Turno QA',
+    'nav.qa': 'QA',
     'nav.pm': 'Project management',
     'nav.edu': 'Education',
     'nav.cta': 'Repository',
@@ -266,7 +266,7 @@
     's5': '<p>Development was AI-assisted. Architecture, hosting and compliance decisions remain mine, which means understanding what is behind the generated code, especially since the product handles employee data and work schedules.</p><div class="tags" style="margin: 14px 0 22px"><span class="tag">TanStack Start</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">Tailwind v4</span><span class="tag">shadcn/ui</span><span class="tag">Supabase</span><span class="tag">PostgreSQL with RLS</span><span class="tag">Stripe</span></div><h3>Three decisions that shaped the system</h3><ol class="steps"><li><b>Data isolation through Row Level Security</b>Each organization and branch only sees its own records, enforced in the database and not only in the interface.</li><li><b>AI in a controlled context</b>The AI summary happens only at shift close, with a limited context. There is no open chat, which keeps cost and behavior predictable.</li><li><b>Plan limits in the database</b>The rules of each plan are applied through PostgreSQL migrations, not front-end validation, so they cannot be bypassed.</li></ol>',
     's6.h2': 'Where it is now',
     's6': '<div class="callout"><p><strong>Current status.</strong> Turno is in active development, with no commercial launch and no external users. That is why this case does not show adoption metrics. What it shows is the reasoning behind each decision so far.</p></div><h3>Known gaps</h3><ul><li>Multi-branch operation</li><li>Native mobile app</li><li>PDF report export</li><li>LGPD (Brazilian data protection law) review before any launch</li></ul><h3>What this phase taught me</h3><ul><li>Starting from a problem you lived through helps discovery, but you still have to check whether the pain repeats outside the original context. That is what led to the decision to generalize early.</li><li>Documenting decisions before launch, not after, is what makes the process reviewable, including by me.</li><li>A fast-changing product needs a separate quality layer. It lives in the next folder.</li></ul>',
-    'next': '<span class="folder-path">next folder: /qa-turno</span><h3>Turno QA</h3><p>Test plan, 25 test cases executed, bugs in Jira and a traceability matrix.</p>',
+    'next': '<span class="folder-path">next folder: /qa</span><h3>QA</h3><p>Test plan, 25 test cases executed, bugs in Jira and a traceability matrix.</p>',
     'open': 'Open',
     'ft.made': 'Made by',
     'ft.home': 'home'
