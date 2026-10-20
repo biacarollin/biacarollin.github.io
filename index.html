@@ -21,7 +21,7 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 560' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%232d5be3' stroke-opacity='0.14' stroke-width='1.3'%3E%3Cpath d='M-40 452 C 230 376 430 486 700 436 S 1180 342 1490 414'/%3E%3Cpath d='M-40 486 C 230 410 430 520 700 470 S 1180 376 1490 448'/%3E%3Cpath d='M-40 520 C 230 444 430 554 700 504 S 1180 410 1490 482'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: center bottom; background-size: 100% 100%;
   }
-  .hero { position: relative; z-index: 1; padding-block: 72px 64px; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 56px; align-items: center; }
+  .hero { position: relative; z-index: 1; padding-block: 60px 26px; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 56px; align-items: center; }
   .hero h1 { font-size: clamp(40px, 6vw, 64px); letter-spacing: -0.03em; line-height: 1.05; }
   .hero .sub { margin-top: 18px; font-size: clamp(18px, 2.2vw, 22px); font-weight: 600; color: var(--ink); max-width: 30ch; line-height: 1.35; }
   .hero .desc { margin-top: 18px; font-size: 17px; color: var(--ink-2); max-width: 56ch; }
@@ -30,14 +30,14 @@
   .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
   .hero-meta svg { width: 15px; height: 15px; }
 
-  .portrait { position: relative; justify-self: end; align-self: end; width: 100%; max-width: 400px; margin-bottom: -78px; }
+  .portrait { position: relative; justify-self: end; align-self: end; width: 100%; max-width: 400px; margin-bottom: -38px; }
   .portrait img {
     position: relative; z-index: 1; width: 100%; height: auto; display: block;
     -webkit-mask-image: linear-gradient(180deg, rgb(0,0,0) 72%, rgba(0,0,0,0.5) 89%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(180deg, rgb(0,0,0) 72%, rgba(0,0,0,0.5) 89%, rgba(0,0,0,0) 100%);
   }
 
-  .transition { position: relative; z-index: 1; padding-block: 28px 10px; }
+  .transition { position: relative; z-index: 1; padding-block: 10px 12px; }
   .transition-in { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; font-size: 13.5px; font-weight: 700; }
   .transition-in .from { color: var(--warm-ink); }
   .transition-in .to { color: var(--blue-ink); text-align: right; }
@@ -77,10 +77,10 @@
 
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; gap: 36px; }
-    .portrait { justify-self: center; max-width: 250px; margin-bottom: -48px; }
+    .portrait { justify-self: center; max-width: 250px; margin-bottom: 0; }
   }
   @media (max-width: 720px) {
-    .hero { padding-block: 48px 40px; }
+    .hero { padding-block: 44px 20px; }
     .tl { grid-template-columns: 1fr; gap: 6px; }
     .tools-row { grid-template-columns: 1fr; gap: 8px; }
     .tools-label { padding-top: 0; }
@@ -192,7 +192,7 @@
         <article class="tl now">
           <div class="when" data-i18n="tl4.when">2026 em diante</div>
           <div>
-            <h3 data-i18n="tl4.h3">Transição para tecnologia: QA e gestão de projetos</h3>
+            <h3 data-i18n="tl4.h3">Interesse em gestão de projetos e qualidade de software</h3>
             <div class="where" data-i18n="tl4.where">Certificação em Qualidade e Teste de Software (PUC-RS), Certificação em Gerenciamento de Projetos (Google), graduação em ADS (FAM)</div>
             <p data-i18n="tl4.p">Desde 2026, aplico a base prática de operações em projetos reais de tecnologia, cobrindo o ciclo completo: descoberta, requisitos, planejamento, testes e documentação.</p>
             <div class="tags" data-i18n="tl4.tags"><span class="tag blue">Mapeamento de processos</span><span class="tag blue">Dashboards e KPIs</span><span class="tag blue">Testes manuais</span><span class="tag blue">Regressão</span><span class="tag blue">Exploratório</span><span class="tag blue">Plano de testes</span><span class="tag blue">Cypress</span><span class="tag blue">Jira</span><span class="tag blue">Asana</span><span class="tag blue">Scrum e Kanban</span></div>
@@ -408,7 +408,7 @@
     'tl3.p': 'High-volume medication dispensing, stock control and invoice checking in a regulated environment.',
     'tl3.tags': '<span class="tag warm">Regulated environment</span><span class="tag warm">High volume</span>',
     'tl4.when': '2026 onwards',
-    'tl4.h3': 'Moving into technology: QA and project management',
+    'tl4.h3': 'Interest in project management and software quality',
     'tl4.where': 'Software Quality and Testing certificate (PUC-RS), Project Management certificate (Google), degree in Systems Analysis and Development (FAM)',
     'tl4.p': 'Since 2026, I have been applying that practical operations background to real technology projects, covering the full cycle: discovery, requirements, planning, testing and documentation.',
     'tl4.tags': '<span class="tag blue">Process mapping</span><span class="tag blue">Dashboards and KPIs</span><span class="tag blue">Manual testing</span><span class="tag blue">Regression</span><span class="tag blue">Exploratory</span><span class="tag blue">Test plan</span><span class="tag blue">Cypress</span><span class="tag blue">Jira</span><span class="tag blue">Asana</span><span class="tag blue">Scrum and Kanban</span>',
