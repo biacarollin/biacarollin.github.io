@@ -51,6 +51,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 img { max-width: 100%; display: block; }
 a { color: var(--blue-ink); text-decoration: none; }
@@ -201,7 +202,7 @@ code, .mono { font-family: var(--mono); font-size: 0.86em; }
 .case-head .tags { margin-top: 22px; }
 .case-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 
-.case-body { padding: 24px 0 80px; }
+.case-body { padding-block: 24px 80px; }
 .case-section { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px; padding: 44px 0; border-bottom: 1px solid var(--line); }
 .case-section:last-of-type { border-bottom: none; }
 .case-num { position: sticky; top: 84px; align-self: start; }
