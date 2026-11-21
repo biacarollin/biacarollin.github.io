@@ -7,7 +7,7 @@
 <meta name="description" content="Dashboards e indicadores construídos em planilha: cobertura de estoque, ponto de reposição, curva ABC e sugestão de compra.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>
   .case-content.wide { max-width: none; }
@@ -46,25 +46,29 @@
 </head>
 <body>
 <a class="skip" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
-<div class="topline"></div>
 
-<header class="nav">
+
+<header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="../"><span class="brand-dot"></span>Bianca Carvalho</a>
+    <a class="brand" href="../">bianca carvalho</a>
     <nav class="nav-links" aria-label="Pastas">
-      <a href="../#pastas" data-i18n="nav.all">Todas as pastas</a>
-      <a href="../turno/" data-i18n="nav.turno">Turno</a>
-      <a href="../qa/" data-i18n="nav.qa">QA</a>
-      <a href="../gestao-de-projetos/" data-i18n="nav.pm">Gestão de projetos</a>
+      <a href="../#projetos" data-i18n="nav.all">projetos</a>
+      <a href="../turno/" data-i18n="nav.turno">turno</a>
+      <a href="../gestao-de-projetos/" data-i18n="nav.pm">gestão de projetos</a>
+      <a href="../operacoes/" data-i18n="nav.op">operações</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-cta" href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="nav-ext">
+        <a href="https://github.com/biacarollin" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">linkedin</a>
+      </div>
+      <span class="nav-sep">|</span>
       <div class="lang" role="group" aria-label="Idioma">
         <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT</button>
         <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
       <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
@@ -75,10 +79,10 @@
     <div class="wrap">
       <div class="crumbs"><a href="../">inicio</a><span>/</span><b>dashboards</b></div>
       <span class="eyebrow" data-i18n="h.eyebrow">Dashboards e KPIs</span>
-      <h1 data-i18n="h.h1">Dashboards e KPIs</h1>
+      <h1 data-i18n="h.h1">dashboards e kpis.</h1>
       <p class="lead" data-i18n="h.lead">Painéis que transformam movimentação bruta em decisão de compra. O indicador só vale se alguém olha para ele e sabe o que fazer no dia seguinte.</p>
       <div class="tags" data-i18n="h.tags">
-        <span class="tag blue">Google Sheets</span>
+        <span class="tag green">Google Sheets</span>
         <span class="tag">Indicadores</span>
         <span class="tag">Curva ABC</span>
         <span class="tag">Ponto de reposição</span>
@@ -121,7 +125,7 @@
               <h3>Dashboard de estoque e reposição</h3>
               <p>Painel de varejo que responde a uma pergunta prática: o que comprar nesta semana e quanto. Calcula cobertura em dias a partir da venda média, classifica cada item entre ruptura, ponto de pedido, atenção, adequado e excesso, e devolve a quantidade sugerida de compra. A curva ABC mostra onde está a receita e o indicador de parado aponta o capital que não gira.</p>
               <div class="tags">
-                <span class="tag blue">Cobertura em dias</span><span class="tag blue">Ponto de reposição</span><span class="tag blue">Sugestão de compra</span><span class="tag blue">Curva ABC</span><span class="tag blue">Estoque parado</span>
+                <span class="tag green">Cobertura em dias</span><span class="tag green">Ponto de reposição</span><span class="tag green">Sugestão de compra</span><span class="tag green">Curva ABC</span><span class="tag green">Estoque parado</span>
               </div>
             </div>
             <div class="sheet-side" data-i18n="p1.side">
@@ -174,7 +178,7 @@
         <h3>Operações e processos</h3>
         <p>Mapeamento de processo, causa raiz e controle de rotina em planilha.</p>
       </div>
-      <span class="btn btn-ghost" data-i18n="open">Abrir</span>
+      <span class="btn" data-i18n="open">Abrir</span>
     </a>
   </div>
 </main>
@@ -182,7 +186,7 @@
 <footer class="footer">
   <div class="wrap footer-in">
     <span><span data-i18n="ft.made">Feito por</span> <a href="https://github.com/biacarollin" target="_blank" rel="noopener">Biacarollin</a> <span class="heart">♥</span></span>
-    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../turno/">turno</a> / <a href="../qa/">qa</a> / <a href="../gestao-de-projetos/">gestao-de-projetos</a> / <a href="../operacoes/">operacoes</a> / <a href="../formacao/">formacao</a></span>
+    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../turno/">turno</a> / <a href="../gestao-de-projetos/">gestao-de-projetos</a> / <a href="../operacoes/">operacoes</a> / <a href="../formacao/">formacao</a></span>
   </div>
 </footer>
 
@@ -190,18 +194,19 @@
   var TITLES = { pt: 'Dashboards e KPIs | Bianca Carvalho', en: 'Dashboards and KPIs | Bianca Carvalho' };
   var EN = {
     'skip': 'Skip to content',
-    'nav.all': 'All folders',
-    'nav.turno': 'Turno',
-    'nav.qa': 'QA',
-    'nav.pm': 'Project management',
+    'nav.all': 'projects',
+    'nav.turno': 'turno',
+    'nav.pm': 'project management',
+    'nav.op': 'operations',
+    'nav.dash': 'dashboards',
     'h.eyebrow': 'Dashboards and KPIs',
-    'h.h1': 'Dashboards and KPIs',
+    'h.h1': 'dashboards and kpis.',
     'h.lead': 'Dashboards that turn raw movement into a buying decision. An indicator is only worth keeping if someone looks at it and knows what to do the next day.',
-    'h.tags': '<span class="tag blue">Google Sheets</span><span class="tag">Indicators</span><span class="tag">ABC analysis</span><span class="tag">Reorder point</span>',
+    'h.tags': '<span class="tag green">Google Sheets</span><span class="tag">Indicators</span><span class="tag">ABC analysis</span><span class="tag">Reorder point</span>',
     's1.h2': 'How I think about a dashboard',
     's1': '<p class="lede">A dashboard nobody uses is a decorated report. Before building any chart I ask which decision that number unlocks.</p><p>I spent years working with productivity and shift coverage indicators, where a wrong number meant an uncovered shift. I brought that standard with me: every metric needs an owner, a frequency and an action attached to it. The rest is noise.</p><div class="kpi-grid"><div class="kpi"><h4>The question before the chart</h4><p>Which decision does this metric change? If the answer is none, it leaves the dashboard.</p></div><div class="kpi"><h4>A defined threshold</h4><p>Every indicator has a normal range. With no threshold there is no alert, only an observation.</p></div><div class="kpi"><h4>Input apart from reading</h4><p>Whoever enters data does not touch the formulas. A separate rules tab prevents silent breakage.</p></div></div>',
     's2.h2': 'The dashboard',
-    'p1': '<span class="sheet-kind"><i></i>Google Sheets</span><h3>Inventory and replenishment dashboard</h3><p>A retail dashboard that answers one practical question: what to buy this week and how much. It calculates coverage in days from average sales, sorts each item into stockout, reorder, watch, healthy or overstock, and returns a suggested order quantity. The ABC analysis shows where the revenue sits, and the stale stock indicator points to capital that is not moving.</p><div class="tags"><span class="tag blue">Coverage in days</span><span class="tag blue">Reorder point</span><span class="tag blue">Suggested order</span><span class="tag blue">ABC analysis</span><span class="tag blue">Stale stock</span></div>',
+    'p1': '<span class="sheet-kind"><i></i>Google Sheets</span><h3>Inventory and replenishment dashboard</h3><p>A retail dashboard that answers one practical question: what to buy this week and how much. It calculates coverage in days from average sales, sorts each item into stockout, reorder, watch, healthy or overstock, and returns a suggested order quantity. The ABC analysis shows where the revenue sits, and the stale stock indicator points to capital that is not moving.</p><div class="tags"><span class="tag green">Coverage in days</span><span class="tag green">Reorder point</span><span class="tag green">Suggested order</span><span class="tag green">ABC analysis</span><span class="tag green">Stale stock</span></div>',
     'p1.side': '<h4>Tabs in the file</h4><ul><li>Dashboard</li><li>Products</li><li>Sales</li><li>Receipts</li><li>Rules</li><li>Ranking</li></ul><span class="sheet-open">Open the file</span>',
     's3.h2': 'How it was built',
     's3': '<p>The file is a tool, not a snapshot. Whoever uses it enters sales and receipts, and the dashboard recalculates on its own.</p><dl class="kv"><dt>Rules apart</dt><dd>Lead time, safety stock and target coverage live in their own tab. Changing the policy does not require touching a formula.</dd><dt>Status by range</dt><dd>Each item falls into one of five situations based on the calculated coverage, with conditional formatting flagging what needs action today.</dd><dt>Prioritization</dt><dd>The ABC analysis sorts by share of revenue, so attention goes first to the items that carry the turnover.</dd><dt>Quick reading</dt><dd>Trend sparklines on the row itself, to see behaviour without opening another tab.</dd><dt>Data</dt><dd>A demonstration version with sample data, with no link to a real operation.</dd></dl>',

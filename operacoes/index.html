@@ -7,7 +7,7 @@
 <meta name="description" content="Projetos de operação e processo em planilha: reestruturação de escala, fluxo de dispensação e estoque e controle de escalas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>
   .case-content.wide { max-width: none; }
@@ -41,25 +41,29 @@
 </head>
 <body>
 <a class="skip" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
-<div class="topline"></div>
 
-<header class="nav">
+
+<header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="../"><span class="brand-dot"></span>Bianca Carvalho</a>
+    <a class="brand" href="../">bianca carvalho</a>
     <nav class="nav-links" aria-label="Pastas">
-      <a href="../#pastas" data-i18n="nav.all">Todas as pastas</a>
-      <a href="../turno/" data-i18n="nav.turno">Turno</a>
-      <a href="../qa/" data-i18n="nav.qa">QA</a>
-      <a href="../gestao-de-projetos/" data-i18n="nav.pm">Gestão de projetos</a>
+      <a href="../#projetos" data-i18n="nav.all">projetos</a>
+      <a href="../turno/" data-i18n="nav.turno">turno</a>
+      <a href="../gestao-de-projetos/" data-i18n="nav.pm">gestão de projetos</a>
+      <a href="../dashboards/" data-i18n="nav.dash">dashboards</a>
     </nav>
     <div class="nav-right">
-      <a class="nav-cta" href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="nav-ext">
+        <a href="https://github.com/biacarollin" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">linkedin</a>
+      </div>
+      <span class="nav-sep">|</span>
       <div class="lang" role="group" aria-label="Idioma">
         <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT</button>
         <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
       <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
@@ -70,7 +74,7 @@
     <div class="wrap">
       <div class="crumbs"><a href="../">inicio</a><span>/</span><b>operacoes</b></div>
       <span class="eyebrow warm" data-i18n="h.eyebrow">Operações e processos</span>
-      <h1 data-i18n="h.h1">Operações e processos</h1>
+      <h1 data-i18n="h.h1">operações e processos.</h1>
       <p class="lead" data-i18n="h.lead">Três projetos em planilha construídos a partir de problemas que encontrei na operação de saúde. Mapeamento de processo, análise de causa raiz, indicadores e controle de rotina, cada um aberto para consulta.</p>
       <div class="tags" data-i18n="h.tags">
         <span class="tag warm">Google Sheets</span>
@@ -128,7 +132,7 @@
               <h3>Fluxo de dispensação e estoque</h3>
               <p>Controle operacional de medicamentos em farmácia hospitalar, construído a partir da rotina de dispensação. O painel acompanha itens no ponto de pedido, lotes vencidos e a vencer, requisições atendidas integralmente, tempo médio de atendimento e taxa de atendimento, com os gargalos destacados em aba própria.</p>
               <div class="tags">
-                <span class="tag blue">Painel de indicadores</span><span class="tag blue">Controle de estoque</span><span class="tag blue">Validade</span><span class="tag blue">Ponto de pedido</span><span class="tag blue">Gargalos</span>
+                <span class="tag green">Painel de indicadores</span><span class="tag green">Controle de estoque</span><span class="tag green">Validade</span><span class="tag green">Ponto de pedido</span><span class="tag green">Gargalos</span>
               </div>
             </div>
             <div class="sheet-side" data-i18n="p2.side">
@@ -191,7 +195,7 @@
         <h3>Gestão de projetos</h3>
         <p>O mesmo raciocínio aplicado a backlog, roadmap e critérios de aceite.</p>
       </div>
-      <span class="btn btn-ghost" data-i18n="open">Abrir</span>
+      <span class="btn" data-i18n="open">Abrir</span>
     </a>
   </div>
 </main>
@@ -199,7 +203,7 @@
 <footer class="footer">
   <div class="wrap footer-in">
     <span><span data-i18n="ft.made">Feito por</span> <a href="https://github.com/biacarollin" target="_blank" rel="noopener">Biacarollin</a> <span class="heart">♥</span></span>
-    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../turno/">turno</a> / <a href="../qa/">qa</a> / <a href="../gestao-de-projetos/">gestao-de-projetos</a> / <a href="../formacao/">formacao</a> / <a href="../dashboards/">dashboards</a></span>
+    <span><a href="../" data-i18n="ft.home">início</a> / <a href="../turno/">turno</a> / <a href="../gestao-de-projetos/">gestao-de-projetos</a> / <a href="../formacao/">formacao</a> / <a href="../dashboards/">dashboards</a></span>
   </div>
 </footer>
 
@@ -207,13 +211,13 @@
   var TITLES = { pt: 'Operações e processos | Bianca Carvalho', en: 'Operations and process | Bianca Carvalho' };
   var EN = {
     'skip': 'Skip to content',
-    'nav.all': 'All folders',
-    'nav.turno': 'Turno',
-    'nav.qa': 'QA',
-    'nav.pm': 'Project management',
-    'nav.edu': 'Education',
+    'nav.all': 'projects',
+    'nav.turno': 'turno',
+    'nav.pm': 'project management',
+    'nav.op': 'operations',
+    'nav.dash': 'dashboards',
     'h.eyebrow': 'Operations and process',
-    'h.h1': 'Operations and process',
+    'h.h1': 'operations and process.',
     'h.lead': 'Three spreadsheet projects built from problems I ran into in healthcare operations. Process mapping, root cause analysis, indicators and day-to-day control, each one open to view.',
     'h.tags': '<span class="tag warm">Google Sheets</span><span class="tag">Process mapping</span><span class="tag">Indicators</span>',
     's1.h2': 'Why a spreadsheet',
@@ -221,7 +225,7 @@
     's2.h2': 'The projects',
     'p1': '<span class="sheet-kind"><i></i>Google Sheets</span><h3>Schedule restructuring and reallocation by region</h3><p>Refused shifts in the hardest regions and swaps arranged off the books left the schedule outdated and patients without coverage. The file treats this as a process problem, not a people problem: it maps the current flow, isolates the root cause, designs the new flow and closes with an action plan and before and after indicators.</p><div class="tags"><span class="tag warm">As-is mapping</span><span class="tag warm">Root cause</span><span class="tag warm">To-be flow</span><span class="tag warm">Risk matrix</span><span class="tag warm">5W2H</span></div>',
     'p1.side': '<h4>Tabs in the file</h4><ul><li>Summary</li><li>As-is mapping</li><li>Root cause</li><li>To-be flow</li><li>Risk matrix</li><li>Before and after indicators</li><li>5W2H action plan</li></ul><span class="sheet-open">Open the file</span>',
-    'p2': '<span class="sheet-kind"><i></i>Google Sheets</span><h3>Dispensation and stock flow</h3><p>Operational control of medication in a hospital pharmacy, built from the dispensation routine. The dashboard tracks items at reorder point, expired and expiring lots, fully served requests, average handling time and fulfilment rate, with bottlenecks highlighted in their own tab.</p><div class="tags"><span class="tag blue">Indicator dashboard</span><span class="tag blue">Stock control</span><span class="tag blue">Expiry</span><span class="tag blue">Reorder point</span><span class="tag blue">Bottlenecks</span></div>',
+    'p2': '<span class="sheet-kind"><i></i>Google Sheets</span><h3>Dispensation and stock flow</h3><p>Operational control of medication in a hospital pharmacy, built from the dispensation routine. The dashboard tracks items at reorder point, expired and expiring lots, fully served requests, average handling time and fulfilment rate, with bottlenecks highlighted in their own tab.</p><div class="tags"><span class="tag green">Indicator dashboard</span><span class="tag green">Stock control</span><span class="tag green">Expiry</span><span class="tag green">Reorder point</span><span class="tag green">Bottlenecks</span></div>',
     'p2.side': '<h4>Tabs in the file</h4><ul><li>Dashboard</li><li>Flow and movement</li><li>Items and expiry</li><li>Replenishment</li><li>Bottlenecks</li><li>Parameters</li><li>How to use</li></ul><span class="sheet-open">Open the file</span>',
     'p3': '<span class="sheet-kind"><i></i>Google Sheets</span><h3>Schedule control</h3><p>A home care schedule organized by professional and region, with patient, frequency, procedure, days of the week and visit rate. The colour code separates a visit with the report delivered from one that needs adjustment and from one that happened with no record, which is exactly the one that turns into a billing rejection.</p><div class="tags"><span class="tag">Schedule sizing</span><span class="tag">Coverage by region</span><span class="tag">Evidence checking</span><span class="tag">Billing</span></div>',
     'p3.side': '<h4>What the file controls</h4><ul><li>Professional and council registration</li><li>Service region</li><li>Patient and frequency</li><li>Procedure and days of the week</li><li>Visit rate</li><li>Report status by colour</li></ul><span class="sheet-open">Open the file</span>',
