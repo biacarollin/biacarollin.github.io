@@ -6,6 +6,16 @@
   var PT = {};
   nodes.forEach(function (el) { PT[el.getAttribute('data-i18n')] = el.innerHTML; });
 
+  function moveKnob() {
+    var box = document.querySelector('.lang');
+    if (!box) return;
+    var knob = box.querySelector('.knob');
+    var active = box.querySelector('button.active');
+    if (!knob || !active) return;
+    knob.style.width = active.offsetWidth + 'px';
+    knob.style.transform = 'translateX(' + (active.offsetLeft - 3) + 'px)';
+  }
+
   function apply(lang) {
     var dict = lang === 'en' ? (window.EN || {}) : PT;
     nodes.forEach(function (el) {
@@ -18,6 +28,7 @@
     document.querySelectorAll('.lang button').forEach(function (b) {
       b.classList.toggle('active', b.getAttribute('data-lang') === lang);
     });
+    moveKnob();
   }
 
   window.setLang = function (lang) {
@@ -38,5 +49,7 @@
 
   var saved = 'pt';
   try { saved = localStorage.getItem('lang') || 'pt'; } catch (e) {}
-  if (saved === 'en') apply('en');
+  if (saved === 'en') { apply('en'); } else { moveKnob(); }
+  window.addEventListener('resize', moveKnob);
+  window.addEventListener('load', moveKnob);
 })();

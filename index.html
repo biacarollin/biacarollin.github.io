@@ -58,23 +58,24 @@
 <body>
 <a class="skip" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
 
-<header class="nav" id="nav">
+<header class="nav light" id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#">bianca carvalho</a>
+    <a class="brand" href="#">Bianca Carvalho</a>
     <nav class="nav-links" aria-label="Seções">
-      <a href="#projetos" data-i18n="nav1">projetos</a>
-      <a href="#trajetoria" data-i18n="nav2">trajetória</a>
-      <a href="#sobre" data-i18n="nav3">sobre</a>
-      <a href="#contato" data-i18n="nav4">contato</a>
+      <a href="#projetos" data-i18n="nav1">Projetos</a>
+      <a href="#trajetoria" data-i18n="nav2">Trajetória</a>
+      <a href="#sobre" data-i18n="nav3">Sobre</a>
+      <a href="#contato" data-i18n="nav4">Contato</a>
     </nav>
     <div class="nav-right">
       <div class="nav-ext">
-        <a href="https://github.com/biacarollin" target="_blank" rel="noopener">github</a>
-        <a href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://github.com/biacarollin" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <span class="nav-sep">|</span>
       <div class="lang" role="group" aria-label="Idioma">
-        <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT</button>
+        <span class="knob" aria-hidden="true"></span>
+        <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT-BR</button>
         <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
       <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
@@ -86,13 +87,15 @@
 
 <main id="conteudo">
 
+  <div class="band-light">
   <section class="wrap hero">
     <div>
       <span class="eyebrow" data-i18n="hero.eyebrow">Bianca Carvalho · Gestão de projetos</span>
-      <h1 data-i18n="hero.h1">gestão de<br><em>projetos.</em></h1>
+      <h1 data-i18n="hero.h1">Gestão de<br><em>projetos.</em></h1>
+      <span class="tagline" data-i18n="hero.tagline">Transformar ideia em resultado</span>
       <p class="desc" data-i18n="hero.desc">Mais de quatro anos de experiência na gestão de equipes, escalas e registros em operações reguladas de saúde, hoje aplicada a escopo, cronograma, indicadores e mapeamento de processos.</p>
       <div class="hero-actions">
-        <a class="link-u" href="#projetos" data-i18n="hero.cta">conheça meus projetos <span class="ar">↘</span></a>
+        <a class="link-u" href="#projetos" data-i18n="hero.cta">Conheça meus projetos <span class="ar">↘</span></a>
       </div>
       <div class="hero-meta" data-i18n="hero.meta">Disponível para gestão de projetos e PMO</div>
     </div>
@@ -108,8 +111,9 @@
       <span data-i18n="strip.b">Do problema ao escopo, do escopo à entrega.</span>
     </div>
   </div>
+  </div>
 
-  <section class="section" id="projetos" style="border-top: none">
+  <section class="section tone-a" id="projetos" style="border-top: none">
     <div class="wrap">
       <div class="cards">
 
@@ -119,7 +123,7 @@
             <h3 data-i18n="c1.h3">Turno</h3>
             <p data-i18n="c1.p">SaaS B2B de passagem de turno criado a partir de um problema real da operação de saúde. Pesquisa, escopo, requisitos, critérios de aceite e roadmap.</p>
             <div class="tags" data-i18n="c1.tags"><span class="tag green">Escopo</span><span class="tag green">Requisitos</span><span class="tag green">Roadmap</span></div>
-            <div class="card-foot" data-i18n="c1.foot"><span><b>19</b> telas web, <b>7</b> mobile</span><span class="card-open">abrir</span></div>
+            <div class="card-foot" data-i18n="c1.foot"><span><b>19</b> telas web, <b>7</b> mobile</span><span class="card-open">Abrir</span></div>
           </div>
         </a>
 
@@ -129,7 +133,7 @@
             <h3 data-i18n="c2.h3">Gestão de projetos</h3>
             <p data-i18n="c2.p">Backlog priorizado, roadmap em três fases, critérios de aceite e os casos de operação em que escala, indicador e prazo já eram responsabilidade minha.</p>
             <div class="tags" data-i18n="c2.tags"><span class="tag lilac">Backlog</span><span class="tag lilac">Asana</span><span class="tag lilac">Scrum</span></div>
-            <div class="card-foot" data-i18n="c2.foot"><span>Certificação Google</span><span class="card-open">abrir</span></div>
+            <div class="card-foot" data-i18n="c2.foot"><span>Certificação Google</span><span class="card-open">Abrir</span></div>
           </div>
         </a>
 
@@ -139,7 +143,7 @@
             <h3 data-i18n="c3.h3">Operações e processos</h3>
             <p data-i18n="c3.p">Reestruturação de escala com mapeamento AS-IS e TO-BE, causa raiz, matriz de risco e plano de ação 5W2H. Mais dois controles de rotina.</p>
             <div class="tags" data-i18n="c3.tags"><span class="tag teal">AS-IS e TO-BE</span><span class="tag teal">Causa raiz</span><span class="tag teal">5W2H</span></div>
-            <div class="card-foot" data-i18n="c3.foot"><span><b>3</b> planilhas</span><span class="card-open">abrir</span></div>
+            <div class="card-foot" data-i18n="c3.foot"><span><b>3</b> planilhas</span><span class="card-open">Abrir</span></div>
           </div>
         </a>
 
@@ -149,7 +153,7 @@
             <h3 data-i18n="c4.h3">Dashboards e KPIs</h3>
             <p data-i18n="c4.p">Painel de estoque e reposição com cobertura em dias, ponto de pedido, sugestão de compra e curva ABC.</p>
             <div class="tags" data-i18n="c4.tags"><span class="tag amber">KPIs</span><span class="tag amber">Curva ABC</span><span class="tag amber">Google Sheets</span></div>
-            <div class="card-foot" data-i18n="c4.foot"><span><b>1</b> painel</span><span class="card-open">abrir</span></div>
+            <div class="card-foot" data-i18n="c4.foot"><span><b>1</b> painel</span><span class="card-open">Abrir</span></div>
           </div>
         </a>
 
@@ -159,7 +163,7 @@
             <h3 data-i18n="c5.h3">Formação</h3>
             <p data-i18n="c5.p">Certificação em Gerenciamento de Projetos do Google, graduação em Análise e Desenvolvimento de Sistemas e cursos complementares.</p>
             <div class="tags" data-i18n="c5.tags"><span class="tag warm">Google</span><span class="tag warm">FGV</span><span class="tag warm">Alura</span></div>
-            <div class="card-foot" data-i18n="c5.foot"><span><b>6</b> itens</span><span class="card-open">abrir</span></div>
+            <div class="card-foot" data-i18n="c5.foot"><span><b>6</b> itens</span><span class="card-open">Abrir</span></div>
           </div>
         </a>
 
@@ -167,11 +171,11 @@
     </div>
   </section>
 
-  <section class="section" id="trajetoria">
+  <section class="section tone-b" id="trajetoria">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow" data-i18n="tj.eyebrow">Trajetória</span>
-        <h2 data-i18n="tj.h2">o caminho até aqui.</h2>
+        <h2 data-i18n="tj.h2">O caminho até aqui.</h2>
         <p data-i18n="tj.p">De vendas e atendimento a operações de saúde, e daí para a gestão de projetos. Cada etapa deixou uma habilidade que uso agora.</p>
       </div>
 
@@ -219,11 +223,11 @@
     </div>
   </section>
 
-  <section class="section" id="sobre">
+  <section class="section tone-c" id="sobre">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow" data-i18n="sk.eyebrow">Sobre</span>
-        <h2 data-i18n="sk.h2">três frentes de trabalho.</h2>
+        <h2 data-i18n="sk.h2">Três frentes de trabalho.</h2>
         <p data-i18n="sk.p">Gestão, processo e indicador. Uma parte veio da certificação e dos projetos, a outra de anos cuidando de escalas, registros e pessoas.</p>
       </div>
 
@@ -272,7 +276,7 @@
       </div>
 
       <div class="edu-more">
-        <a class="btn" href="formacao/" data-i18n="ed.more">ver formação e certificações</a>
+        <a class="btn" href="formacao/" data-i18n="ed.more">Ver formação e certificações</a>
       </div>
     </div>
   </section>
@@ -280,7 +284,7 @@
   <section class="contact" id="contato">
     <div class="wrap">
       <span class="eyebrow" data-i18n="ct.eyebrow">04 · Contato</span>
-      <h2 data-i18n="ct.h2">vamos conversar.</h2>
+      <h2 data-i18n="ct.h2">Vamos conversar.</h2>
       <p data-i18n="ct.p">Isso aqui é só parte do que sei fazer. Bora alinhar o resto?</p>
       <div class="contact-links">
         <a href="mailto:abiancacarolline@gmail.com">
@@ -300,7 +304,7 @@
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer tone-d">
   <div class="wrap footer-in">
     <span><span data-i18n="ft.made">Feito por</span> <a href="https://github.com/biacarollin" target="_blank" rel="noopener">Biacarollin</a> <span class="heart">♥</span></span>
     <span><a href="turno/">turno</a> / <a href="gestao-de-projetos/">gestao-de-projetos</a> / <a href="operacoes/">operacoes</a> / <a href="dashboards/">dashboards</a> / <a href="formacao/">formacao</a></span>
@@ -311,11 +315,12 @@
   var TITLES = { pt: 'Bianca Carvalho | Gestão de Projetos', en: 'Bianca Carvalho | Project Management' };
   var EN = {
     'skip': 'Skip to content',
-    'nav1': 'projects', 'nav2': 'path', 'nav3': 'about', 'nav4': 'contact',
+    'nav1': 'Projects', 'nav2': 'Path', 'nav3': 'About', 'nav4': 'Contact',
     'hero.eyebrow': 'Bianca Carvalho · Project management',
-    'hero.h1': 'project<br><em>management.</em>',
+    'hero.h1': 'Project<br><em>management.</em>',
+    'hero.tagline': 'Turning an idea into a result',
     'hero.desc': 'More than four years of experience managing teams, schedules and records in regulated healthcare operations, now applied to scope, timeline, indicators and process mapping.',
-    'hero.cta': 'see my projects <span class="ar">↘</span>',
+    'hero.cta': 'See my projects <span class="ar">↘</span>',
     'hero.meta': 'Open to project management and PMO roles',
     'hero.cap': 'Project management',
     'strip.a': 'Featured projects',
@@ -324,29 +329,29 @@
     'c1.h3': 'Turno',
     'c1.p': 'A B2B SaaS for shift handover built from a real healthcare operations problem. Research, scope, requirements, acceptance criteria and roadmap.',
     'c1.tags': '<span class="tag green">Scope</span><span class="tag green">Requirements</span><span class="tag green">Roadmap</span>',
-    'c1.foot': '<span><b>19</b> web screens, <b>7</b> mobile</span><span class="card-open">open</span>',
+    'c1.foot': '<span><b>19</b> web screens, <b>7</b> mobile</span><span class="card-open">Open</span>',
     'c2.num': '02 · Management',
     'c2.h3': 'Project management',
     'c2.p': 'A prioritized backlog, a three-phase roadmap, acceptance criteria and the operations cases where schedule, indicator and deadline were already my responsibility.',
     'c2.tags': '<span class="tag lilac">Backlog</span><span class="tag lilac">Asana</span><span class="tag lilac">Scrum</span>',
-    'c2.foot': '<span>Google certificate</span><span class="card-open">open</span>',
+    'c2.foot': '<span>Google certificate</span><span class="card-open">Open</span>',
     'c3.num': '03 · Process',
     'c3.h3': 'Operations and process',
     'c3.p': 'Schedule restructuring with as-is and to-be mapping, root cause, risk matrix and a 5W2H action plan. Plus two day-to-day control files.',
     'c3.tags': '<span class="tag teal">As-is and to-be</span><span class="tag teal">Root cause</span><span class="tag teal">5W2H</span>',
-    'c3.foot': '<span><b>3</b> files</span><span class="card-open">open</span>',
+    'c3.foot': '<span><b>3</b> files</span><span class="card-open">Open</span>',
     'c4.num': '04 · Indicators',
     'c4.h3': 'Dashboards and KPIs',
     'c4.p': 'An inventory and replenishment dashboard with coverage in days, reorder point, suggested order and ABC analysis.',
     'c4.tags': '<span class="tag amber">KPIs</span><span class="tag amber">ABC analysis</span><span class="tag amber">Google Sheets</span>',
-    'c4.foot': '<span><b>1</b> dashboard</span><span class="card-open">open</span>',
+    'c4.foot': '<span><b>1</b> dashboard</span><span class="card-open">Open</span>',
     'c5.num': '05 · Education',
     'c5.h3': 'Education',
     'c5.p': 'Google Project Management certificate, a degree in Systems Analysis and Development and complementary courses.',
     'c5.tags': '<span class="tag warm">Google</span><span class="tag warm">FGV</span><span class="tag warm">Alura</span>',
-    'c5.foot': '<span><b>6</b> items</span><span class="card-open">open</span>',
+    'c5.foot': '<span><b>6</b> items</span><span class="card-open">Open</span>',
     'tj.eyebrow': 'Path',
-    'tj.h2': 'how I got here.',
+    'tj.h2': 'How I got here.',
     'tj.p': 'From sales and customer service to healthcare operations, and from there into project management. Each step left a skill I still use.',
     'tl1.when': 'Before 2021',
     'tl1.h3': 'Sales, customer service and production',
@@ -369,7 +374,7 @@
     'tl4.p': 'Since 2026, I have been applying that practical operations background to real technology projects, covering the full cycle: discovery, requirements, planning, follow-up and documentation.',
     'tl4.tags': '<span class="tag green">Process mapping</span><span class="tag green">Dashboards and KPIs</span><span class="tag green">Backlog</span><span class="tag green">Asana</span><span class="tag green">Scrum and Kanban</span>',
     'sk.eyebrow': 'About',
-    'sk.h2': 'three areas of work.',
+    'sk.h2': 'Three areas of work.',
     'sk.p': 'Management, process and indicators. Part of it came from the certificate and the projects, the rest from years taking care of schedules, records and people.',
     'sk1.h3': 'Project management',
     'sk1.ul': '<li>Scope and requirements definition</li><li>Verifiable acceptance criteria</li><li>Backlog prioritization and roadmap</li><li>Timeline, deadlines and contingencies</li><li>Risk management and RACI matrix</li>',
@@ -381,9 +386,9 @@
     'tools.t1': '<span class="tag green">Process mapping (as-is and to-be)</span><span class="tag green">SOPs</span><span class="tag green">RACI matrix</span><span class="tag green">Risk management</span><span class="tag green">Project management</span><span class="tag green">Dashboards and KPIs</span><span class="tag green">Shift planning</span><span class="tag green">Scrum and Kanban</span>',
     'tools.l2': 'Tools',
     'tools.t2': '<span class="tag">Asana</span><span class="tag">Google Sheets</span><span class="tag">Excel</span><span class="tag">Jira</span><span class="tag">Notion</span><span class="tag">Google Workspace</span><span class="tag">Git and GitHub</span>',
-    'ed.more': 'see education and certificates',
+    'ed.more': 'See education and certificates',
     'ct.eyebrow': '04 · Contact',
-    'ct.h2': "let's talk.",
+    'ct.h2': "Let's talk.",
     'ct.p': 'This is only part of what I can do. Shall we go through the rest?',
     'ft.made': 'Made by'
   };

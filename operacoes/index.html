@@ -45,21 +45,22 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="../">bianca carvalho</a>
+    <a class="brand" href="../">Bianca Carvalho</a>
     <nav class="nav-links" aria-label="Pastas">
-      <a href="../#projetos" data-i18n="nav.all">projetos</a>
-      <a href="../turno/" data-i18n="nav.turno">turno</a>
-      <a href="../gestao-de-projetos/" data-i18n="nav.pm">gestão de projetos</a>
-      <a href="../dashboards/" data-i18n="nav.dash">dashboards</a>
+      <a href="../#projetos" data-i18n="nav.all">Projetos</a>
+      <a href="../turno/" data-i18n="nav.turno">Turno</a>
+      <a href="../gestao-de-projetos/" data-i18n="nav.pm">Gestão de projetos</a>
+      <a href="../dashboards/" data-i18n="nav.dash">Dashboards</a>
     </nav>
     <div class="nav-right">
       <div class="nav-ext">
-        <a href="https://github.com/biacarollin" target="_blank" rel="noopener">github</a>
-        <a href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://github.com/biacarollin" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/biancacarvalhox" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <span class="nav-sep">|</span>
       <div class="lang" role="group" aria-label="Idioma">
-        <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT</button>
+        <span class="knob" aria-hidden="true"></span>
+        <button type="button" data-lang="pt" class="active" onclick="setLang('pt')">PT-BR</button>
         <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
       <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
@@ -74,7 +75,7 @@
     <div class="wrap">
       <div class="crumbs"><a href="../">inicio</a><span>/</span><b>operacoes</b></div>
       <span class="eyebrow warm" data-i18n="h.eyebrow">Operações e processos</span>
-      <h1 data-i18n="h.h1">operações e processos.</h1>
+      <h1 data-i18n="h.h1">Operações e processos.</h1>
       <p class="lead" data-i18n="h.lead">Três projetos em planilha construídos a partir de problemas que encontrei na operação de saúde. Mapeamento de processo, análise de causa raiz, indicadores e controle de rotina, cada um aberto para consulta.</p>
       <div class="tags" data-i18n="h.tags">
         <span class="tag warm">Google Sheets</span>
@@ -211,13 +212,13 @@
   var TITLES = { pt: 'Operações e processos | Bianca Carvalho', en: 'Operations and process | Bianca Carvalho' };
   var EN = {
     'skip': 'Skip to content',
-    'nav.all': 'projects',
-    'nav.turno': 'turno',
-    'nav.pm': 'project management',
-    'nav.op': 'operations',
-    'nav.dash': 'dashboards',
+    'nav.all': 'Projects',
+    'nav.turno': 'Turno',
+    'nav.pm': 'Project management',
+    'nav.op': 'Operations',
+    'nav.dash': 'Dashboards',
     'h.eyebrow': 'Operations and process',
-    'h.h1': 'operations and process.',
+    'h.h1': 'Operations and process.',
     'h.lead': 'Three spreadsheet projects built from problems I ran into in healthcare operations. Process mapping, root cause analysis, indicators and day-to-day control, each one open to view.',
     'h.tags': '<span class="tag warm">Google Sheets</span><span class="tag">Process mapping</span><span class="tag">Indicators</span>',
     's1.h2': 'Why a spreadsheet',
