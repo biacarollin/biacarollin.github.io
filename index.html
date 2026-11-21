@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
+  .cards { grid-template-columns: repeat(2, 1fr); }
   .hero { padding-block: 72px 60px; display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 56px; align-items: center; }
   .hero h1 { font-size: clamp(46px, 7.4vw, 92px); line-height: 1.0; }
   .hero h1 em { font-style: italic; color: var(--green); }
@@ -117,29 +118,19 @@
     <div class="wrap">
       <div class="cards">
 
-        <a class="card" href="gestao-de-projetos/#turno">
-          <div class="card-in">
-            <span class="card-num" data-i18n="c1.num">01 · Projeto pessoal</span>
-            <h3 data-i18n="c1.h3">Turno</h3>
-            <p data-i18n="c1.p">SaaS B2B de passagem de turno criado a partir de um problema real da operação de saúde. Pesquisa, escopo, requisitos, critérios de aceite e roadmap. Encerrado em maio de 2026.</p>
-            <div class="tags" data-i18n="c1.tags"><span class="tag green">Escopo</span><span class="tag green">Requisitos</span><span class="tag green">Roadmap</span></div>
-            <div class="card-foot" data-i18n="c1.foot"><span>Fevereiro a maio de 2026</span><span class="card-open">Abrir</span></div>
-          </div>
-        </a>
-
         <a class="card lilac" href="gestao-de-projetos/">
           <div class="card-in">
-            <span class="card-num" data-i18n="c2.num">02 · Gestão</span>
+            <span class="card-num" data-i18n="c2.num">01 · Gestão</span>
             <h3 data-i18n="c2.h3">Gestão de projetos</h3>
-            <p data-i18n="c2.p">Backlog priorizado, roadmap em três fases, critérios de aceite e os casos de operação em que escala, indicador e prazo já eram responsabilidade minha.</p>
-            <div class="tags" data-i18n="c2.tags"><span class="tag lilac">Backlog</span><span class="tag lilac">Asana</span><span class="tag lilac">Scrum</span></div>
+            <p data-i18n="c2.p">Turno (projeto pessoal encerrado em maio de 2026), backlog priorizado, roadmap em três fases, critérios de aceite e os casos de operação em que escala, indicador e prazo já eram responsabilidade minha.</p>
+            <div class="tags" data-i18n="c2.tags"><span class="tag lilac">Turno</span><span class="tag lilac">Backlog</span><span class="tag lilac">Scrum</span></div>
             <div class="card-foot" data-i18n="c2.foot"><span>Certificação Google</span><span class="card-open">Abrir</span></div>
           </div>
         </a>
 
         <a class="card teal" href="operacoes/">
           <div class="card-in">
-            <span class="card-num" data-i18n="c3.num">03 · Processos</span>
+            <span class="card-num" data-i18n="c3.num">02 · Processos</span>
             <h3 data-i18n="c3.h3">Operações e processos</h3>
             <p data-i18n="c3.p">Reestruturação de escala com mapeamento AS-IS e TO-BE, causa raiz, matriz de risco e plano de ação 5W2H. Mais dois controles de rotina.</p>
             <div class="tags" data-i18n="c3.tags"><span class="tag teal">AS-IS e TO-BE</span><span class="tag teal">Causa raiz</span><span class="tag teal">5W2H</span></div>
@@ -149,7 +140,7 @@
 
         <a class="card amber" href="dashboards/">
           <div class="card-in">
-            <span class="card-num" data-i18n="c4.num">04 · Indicadores</span>
+            <span class="card-num" data-i18n="c4.num">03 · Indicadores</span>
             <h3 data-i18n="c4.h3">Dashboards e KPIs</h3>
             <p data-i18n="c4.p">Painel de estoque e reposição com cobertura em dias, ponto de pedido, sugestão de compra e curva ABC.</p>
             <div class="tags" data-i18n="c4.tags"><span class="tag amber">KPIs</span><span class="tag amber">Curva ABC</span><span class="tag amber">Google Sheets</span></div>
@@ -159,7 +150,7 @@
 
         <a class="card warm" href="formacao/">
           <div class="card-in">
-            <span class="card-num" data-i18n="c5.num">05 · Formação</span>
+            <span class="card-num" data-i18n="c5.num">04 · Formação</span>
             <h3 data-i18n="c5.h3">Formação</h3>
             <p data-i18n="c5.p">Certificação em Gerenciamento de Projetos do Google, graduação em Análise e Desenvolvimento de Sistemas e cursos complementares.</p>
             <div class="tags" data-i18n="c5.tags"><span class="tag warm">Google</span><span class="tag warm">FGV</span><span class="tag warm">Alura</span></div>
@@ -325,27 +316,22 @@
     'hero.cap': 'Project management',
     'strip.a': 'Featured projects',
     'strip.b': 'From the problem to the scope, from the scope to delivery.',
-    'c1.num': '01 · Personal project',
-    'c1.h3': 'Turno',
-    'c1.p': 'A B2B SaaS for shift handover built from a real healthcare operations problem. Research, scope, requirements, acceptance criteria and roadmap. Closed in May 2026.',
-    'c1.tags': '<span class="tag green">Scope</span><span class="tag green">Requirements</span><span class="tag green">Roadmap</span>',
-    'c1.foot': '<span>February to May 2026</span><span class="card-open">Open</span>',
-    'c2.num': '02 · Management',
+    'c2.num': '01 · Management',
     'c2.h3': 'Project management',
-    'c2.p': 'A prioritized backlog, a three-phase roadmap, acceptance criteria and the operations cases where schedule, indicator and deadline were already my responsibility.',
-    'c2.tags': '<span class="tag lilac">Backlog</span><span class="tag lilac">Asana</span><span class="tag lilac">Scrum</span>',
+    'c2.p': 'Turno (a personal project closed in May 2026), a prioritized backlog, a three-phase roadmap, acceptance criteria and the operations cases where schedule, indicator and deadline were already my responsibility.',
+    'c2.tags': '<span class="tag lilac">Turno</span><span class="tag lilac">Backlog</span><span class="tag lilac">Scrum</span>',
     'c2.foot': '<span>Google certificate</span><span class="card-open">Open</span>',
-    'c3.num': '03 · Process',
+    'c3.num': '02 · Process',
     'c3.h3': 'Operations and process',
     'c3.p': 'Schedule restructuring with as-is and to-be mapping, root cause, risk matrix and a 5W2H action plan. Plus two day-to-day control files.',
     'c3.tags': '<span class="tag teal">As-is and to-be</span><span class="tag teal">Root cause</span><span class="tag teal">5W2H</span>',
     'c3.foot': '<span><b>3</b> files</span><span class="card-open">Open</span>',
-    'c4.num': '04 · Indicators',
+    'c4.num': '03 · Indicators',
     'c4.h3': 'Dashboards and KPIs',
     'c4.p': 'An inventory and replenishment dashboard with coverage in days, reorder point, suggested order and ABC analysis.',
     'c4.tags': '<span class="tag amber">KPIs</span><span class="tag amber">ABC analysis</span><span class="tag amber">Google Sheets</span>',
     'c4.foot': '<span><b>1</b> dashboard</span><span class="card-open">Open</span>',
-    'c5.num': '05 · Education',
+    'c5.num': '04 · Education',
     'c5.h3': 'Education',
     'c5.p': 'Google Project Management certificate, a degree in Systems Analysis and Development and complementary courses.',
     'c5.tags': '<span class="tag warm">Google</span><span class="tag warm">FGV</span><span class="tag warm">Alura</span>',
